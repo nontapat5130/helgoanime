@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - open bootstrap modal  on page load </title>
+<link rel='stylesheet' href='https://demo5130.glitch.me/a.css'>
 <script>
   window.console = window.console || function(t) {};
 </script>
@@ -8,93 +18,15 @@
 </script>
 </head>
 <body translate="no">
-<script type="text/javascript" src="https://demo5130.glitch.me/script.js"></script>
-<style type="text/css">
-#overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #000;
-filter:alpha(opacity=70);
--moz-opacity:0.7;
--khtml-opacity: 0.7;
-opacity: 0.7;
-z-index: 100;
-display: none;
-}
-.cnt223 a{
-text-decoration: none;
-}
-.popup{
-width: 100%;
-margin: 0 auto;
-display: none;
-position: fixed;
-z-index: 101;
-}
-.cnt223{
-min-width: 600px;
-width: 600px;
-min-height: 150px;
-margin: 100px auto;
-background: #474747;
-position: relative;
-z-index: 103;
-padding: 15px 35px;
-border-radius: 5px;
-box-shadow: 0 2px 5px #000;
-}
-.cnt223 p{
-clear: both;
-    color: #555555;
-    /* text-align: justify; */
-    font-size: 20px;
-    font-family: sans-serif;
-}
-.cnt223 p a{
-color: #d91900;
-font-weight: bold;
-}
-.cnt223 .x{
-float: right;
-height: 35px;
-left: 22px;
-position: relative;
-top: -25px;
-width: 34px;
-}
-.cnt223 .x:hover{
-cursor: pointer;
-}
-</style>
-<script type='text/javascript'>
-$(function(){
-var overlay = $('<div id="overlay"></div>');
-overlay.show();
-overlay.appendTo(document.body);
-$('.popup').show();
-$('.close').click(function(){
-$('.popup').hide();
-overlay.appendTo(document.body).remove();
-return false;
-});
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
 
-
- 
-
-$('.x').click(function(){
-$('.popup').hide();
-overlay.appendTo(document.body).remove();
-return false;
-});
-});
-</script>
-<div class='popup'>
-<div class='cnt223'>
-<h1>โฆษณา</h1>
-<p>
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">โฆษณา</h4>
+</div>
+<div class="modal-body">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- pop up -->
 <ins class="adsbygoogle"
@@ -106,12 +38,25 @@ return false;
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-<br />
-<br />
-<a href='' class='close'>Close</a>
-</p>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 </div>
 </div>
+</div>
+</div>
+<script src="https://demo5130.glitch.me/ads1.js"></script>
+<script src='https://demo5130.glitch.me/ads2.js'></script>
+<script src='https://demo5130.glitch.me/ads3.js'></script>
+<script id="rendered-js">
+$(window).load(function () {
+  $('#myModal').modal('show');
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
+
 
 
 <script>
