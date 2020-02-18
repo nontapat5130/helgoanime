@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(. )?helgo.site/.* [NC]
+RewriteRule .(jpe?g|gif|bmp|png)$ http://helgo.site/xxxyou-and-thankyou.jpg [NC,R,L]
+</IfModule>
