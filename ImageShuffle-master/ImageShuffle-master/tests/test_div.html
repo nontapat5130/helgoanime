@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .decrypt-me{
+            font-size: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="decrypt-me" data-src="tmp/1"></div>
+    <div class="decrypt-me" data-src="tmp/2"></div>
+    <div class="decrypt-me" data-src="tmp/3"></div>
+    <div class="decrypt-me" data-src="tmp/4"></div>
+    <div class="decrypt-me" data-src="tmp/5"></div>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/div.js"></script>
+    <script>
+        (function($){
+            $(document).ready(function(){
+                $('.decrypt-me').each(function(){
+                    var base_src = $(this).data('src');
+                    var that = this;
+                    $.getJSON(base_src+'.json',function(meta){
+                        decrypter(that,base_src+'.png',meta);
+                    });
+                });
+            });
+
+        })(jQuery);
+    </script>
+</body>
+</html>
