@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Search Input animation</title>
+<style>
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background: #E62878;
+}
+
+svg {
+  overflow: visible;
+}
+
+.search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -16rem;
+  margin-top: -3.5rem;
+  width: 32rem;
+  height: 7rem;
+}
+.search:not(.active) {
+  cursor: pointer;
+}
+
+.search-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.search-svg__path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 6px;
+}
+
+.search-input {
+  position: relative;
+  width: 27rem;
+  height: 6rem;
+  padding: 1.2rem 0 1.2rem 2.5rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 3.6rem;
+  color: #fff;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.search-input.visible {
+  z-index: auto;
+  opacity: 1;
+}
+
+.search-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  z-index: -1;
+}
+.search-close.visible {
+  z-index: auto;
+}
+.search-close.visible:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  opacity: 1;
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58);
+  transition: opacity 0.1s, -webkit-transform 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58);
+  transition: transform 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58), opacity 0.1s;
+  transition: transform 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58), opacity 0.1s, -webkit-transform 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58);
+}
+.search-close.visible:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 1;
+  -webkit-transition: opacity 0.1s 0.2s, -webkit-transform 0.2s 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58);
+  transition: opacity 0.1s 0.2s, -webkit-transform 0.2s 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58);
+  transition: transform 0.2s 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58), opacity 0.1s 0.2s;
+  transition: transform 0.2s 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58), opacity 0.1s 0.2s, -webkit-transform 0.2s 0.2s cubic-bezier(0.73, 0.14, 0.4, 1.58);
+}
+.search-close:before, .search-close:after {
+  content: "";
+  position: absolute;
+  top: 1.2rem;
+  left: 0;
+  width: 100%;
+  height: 0.6rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  opacity: 0;
+}
+.search-close:before {
+  -webkit-transform: rotate(-45deg) translateX(2rem);
+          transform: rotate(-45deg) translateX(2rem);
+  -webkit-transition: opacity 0.1s 0.1s, -webkit-transform 0.2s;
+  transition: opacity 0.1s 0.1s, -webkit-transform 0.2s;
+  transition: transform 0.2s, opacity 0.1s 0.1s;
+  transition: transform 0.2s, opacity 0.1s 0.1s, -webkit-transform 0.2s;
+}
+.search-close:after {
+  -webkit-transform: rotate(45deg) translateX(2rem);
+          transform: rotate(45deg) translateX(2rem);
+  -webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.2s 0.2s;
+  transition: opacity 0.1s 0.3s, -webkit-transform 0.2s 0.2s;
+  transition: transform 0.2s 0.2s, opacity 0.1s 0.3s;
+  transition: transform 0.2s 0.2s, opacity 0.1s 0.3s, -webkit-transform 0.2s 0.2s;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="search">
+<svg class="search-svg" viewBox="0 0 320 70" data-init="M160,3 L160,3 a27,27 0 0,1 0,54 L160,57 a27,27 0 0,1 0,-54 M197,67 181.21,51.21" data-mid="M160,3 L160,3 a27,27 0 0,1 0,54 L160,57 a27,27 0 0,1 0,-54 M179.5,49.5 179.5,49.5" data-active="M27,3 L293,3 a27,27 0 0,1 0,54 L27,57 a27,27 0 0,1 0,-54 M179.5,49.5 179.5,49.5">
+<path class="search-svg__path" d="M160,3 L160,3 a27,27 0 0,1 0,54 L160,57 a27,27 0 0,1 0,-54 M197,67 181.21,51.21" />
+</svg>
+<input type="text" class="search-input" />
+<div class="search-close"></div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js'></script>
+<script id="rendered-js">
+$(document).ready(function () {
+
+  var $search = $(".search"),
+  $input = $(".search-input"),
+  $close = $(".search-close"),
+  $svg = $(".search-svg"),
+  $path = $(".search-svg__path")[0],
+  initD = $svg.data("init"),
+  midD = $svg.data("mid"),
+  finalD = $svg.data("active"),
+  backDelay = 400,
+  midAnim = 200,
+  bigAnim = 400,
+  animating = false;
+
+  $(document).on("click", ".search:not(.active)", function () {
+    if (animating) return;
+    animating = true;
+    $search.addClass("active");
+
+    Snap($path).animate({ "path": midD }, midAnim, mina.backin, function () {
+      Snap($path).animate({ "path": finalD }, bigAnim, mina.easeinout, function () {
+        $input.addClass("visible");
+        $input.focus();
+        $close.addClass("visible");
+        animating = false;
+      });
+    });
+
+  });
+
+  $(document).on("click", ".search-close", function () {
+    if (animating) return;
+    animating = true;
+    $input.removeClass("visible");
+    $close.removeClass("visible");
+    $search.removeClass("active");
+
+    setTimeout(function () {
+      Snap($path).animate({ "path": midD }, bigAnim, mina.easeinout, function () {
+        Snap($path).animate({ "path": initD }, midAnim, mina.easeinout, function () {
+          animating = false;
+        });
+      });
+    }, backDelay);
+  });
+
+});
+//# sourceURL=pen.js
+    </script>
+</body>
+</html>
