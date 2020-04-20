@@ -1,95 +1,242 @@
+@charset "UTF-8";
+/*
+Font-Size List (base 16px)
+10px = 62.5%    18px = 112.5%
+11px = 68.8%    19px = 118.8%
+12px = 75  %    20px = 125  %
+13px = 81.3%    21px = 131.3%
+14px = 87.5%    22px = 137.5%
+15px = 93.8%    23px = 143.8% 
+16px = 100 %    24px = 150  %
+17px = 106.3%
+*/
+
+/* html,body */
+html,
+body{ width: 100%; height: 100%; }
+
+body {
+  background: url(/sp/img/common/bg.png) top left #FFF;
+  color: #201e23;
+  font-family: 'Helvetica', 'Arial', "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "MS PGothic", Osaka, "ＭＳ Ｐゴシック", sans-serif;
+  font-size: 13px;
+  line-height: 1.8em;
+  margin:0;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-all;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*custom */
+#nav li a{ display: block; }
+
+a { outline: none; color:#f08; text-decoration: none; }
+
+.hidden{
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.green { color: #099; }
+.gray { color: #666; }
+
+/*- IMG  */
+img { border:none; -ms-interpolation-mode: bicubic;
+  vertical-align: top;
+  font-size:0;
+  line-height: 0;}
+a img { border: 0px; text-decoration:none; }
+.img-border {  margin: 10px auto; padding: 5px; border:1px solid #ccc;}
+.float_l {  float:left; margin-right: 10px; overflow:hidden; }
+.float_r {  float:right; overflow:hidden; }
 
 
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
-<meta name="format-detection" content="telephone=no" />
-<title>ムービー ｜TVアニメーション「世界征服～謀略のズヴィズダー～」公式サイト</title>
-<meta property="og:site_name" content="オリジナルTVアニメーション「世界征服～謀略のズヴィズダー～」公式サイト" />
-<meta property="og:title" content="オリジナルTVアニメーション「世界征服～謀略のズヴィズダー～」公式サイト| 2014年1月11日よりMBS、TOKYO MX他にて放送開始！" />
-<meta name="description" content="オリジナルTVアニメーション「世界征服～謀略のズヴィズダー～」公式サイト|2014年1月11日よりMBS、TOKYO MX他にて放送開始！" />
-<meta name="copyright" content="Copyright hunting cap brothers／Aniplex・征服実行委員会" />
-<meta name="keywords" content="世界征服,謀略のズヴィズダー,ズヴィズダー,岡村天斎,星空めてお,黒星紅白,アニメ,A-1 Pictures,aniplex" />
-<meta name="viewport" content="width=device-width">
-<meta property="og:image" content="/social.jpg" />
-<meta property="og:url" content="http://www.sekaiseifuku-zzz.com/" />
-<meta property="og:type" content="website" />
-<link rel="apple-touch-icon-precomposed" href="/favicon_sp.png">
+/* clearfix */
+.clearfix { zoom: 1; }
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+  overflow: hidden;
+}
+.clearfix:after { clear: both; }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="format-detection" content="telephone=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" href="https://www.sekaiseifuku-zzz.com//sp/css/reset.css">
-<link rel="stylesheet" href="/1.css">
-<link rel="stylesheet" href="https://www.sekaiseifuku-zzz.com//sp/css/movie.css">
-<link rel="stylesheet" href="https://www.sekaiseifuku-zzz.com//css/colorbox.css" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="https://www.sekaiseifuku-zzz.com//sp/js/reset.js"></script>
-<script src=""></script>
-<script src="https://www.sekaiseifuku-zzz.com//js/jquery.colorbox-min.js"></script>
+.both{ clear:both; }
+.center { margin: 0 auto; text-align: center;}
 
-</head>
-
-<body>
-<div id="wrap">
-<header>
-  <h1 id="h1-logo" class="hidden"><a href="/anime/anime">helgo</a></h1>
-
-</header>
+/* highlight */
+::selection { background: #ccc; }
+::-moz-selection { background: #ccc; }
 
 
+/*-------- CUSTAM ------ */
+/* base */
+#wrap{
+ position: relative;
+  width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#contents{
+  position: relative;
+  margin: 0 auto;
+}
+
+/* header */
+#globalHeader {
+  margin: 0 auto;
+  padding: 0;
+  height: 150px;
+  width: 640px;
+}
+
+#globalNav {
+  background: url(https://www.sekaiseifuku-zzz.com//sp/img/common/bg-menu.png) top center;
+  margin: 0;
+  padding-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+  #globalNavList {
+    margin: 0 auto 30px 40px;
+    padding: 0;
+    overflow: auto;
+
+  }
+    #globalNavList li {
+      float: left;
+      margin: 30px 35px 0 0 ;
+      padding: 0;
+      display: block;
+      width: 162px;
+      height: 162px;
+    }
+
+/* footer */
+#globalFooter {
+  position:relative;
+  overflow:hidden;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+/* social */
+#socialList {
+  position:relative;
+  left:50%;
+  float:left;
+  clear: both;
+  margin: 30px auto;
+  padding: 0;
+}
+  #socialList li{
+  position:relative;
+  left:-50%;
+  float:left;
+  padding:0;
+  float: left;
+  margin-right:30px;
+  }
+
+/* pagetop , btnToPc */
+#pageTop a,
+#btnToPc a{
+  clear: both;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  height: 100px;
+  width: 100%;
+  text-indent: -9999px;
+}
+#pageTop a{
+  background: url(https://www.sekaiseifuku-zzz.com/sp/img/footer/icon-pagetop.png) no-repeat #201e23;
+  background-position: 50% 50%;
+}
+#btnToPc a{
+  background: url(https://www.sekaiseifuku-zzz.com/sp/img/footer/icon-pc.png) no-repeat #8c8399;
+  background-position: 50% 50%;
+}
+
+/* footer-link */
+#footer-link {
+  overflow: hidden;
+}
+  #footer-link li a{
+    background: url(https://www.sekaiseifuku-zzz.com/sp/img/common/icon-arrow.png) no-repeat;
+    background-position:  95% 50%;
+    border-bottom:1px solid #cccccc;
+    display: block;
+    padding-top: 20px;
+    height: 40px;
+    width: 100%;
+    font-size: 129%;
+    font-weight: bold;
+    text-align: center;
+    color: #666;
+  }
+
+#siteInfo {
+  background: url(https://lh3.googleusercontent.com/gEODpoNYEwj7Td3NxynknO9TOAdGcuuaINRuLgQJTy4gR-IrewlRiBWmAJEEMhuLtQTQnTtWP6bgDWSmmh6AO3sf0viOE1JhvfZzJsGSNAYVqNx8X1FylQG97vDZsLdg-YjQNG8msWNeZOTBhUklqjuIF_QxZtXz7p6WVvYiHHi63EzHOOu1EtLk2JMLvdLb8oyuDGCgP0nxQqDVWjdMab53wYzOJBGWoxhxlDGwAsTh5NDupabnhDBKhTMsYY3-KZ7q2rq5Wh-alb4uluDQL3okV7MeL9kzkIEAeMoz6t6oBZ-vlmeC1fvK1Lobvmw6hgw0AeNoe2NXRTjscN0YnKp9SdFX5h3GChqhZOjMRi0U78jPqeBfDjg0LJzAR6AgOxWxRQoy_Pu7Ja-kqZM0XnJ_51-YvIYU2qe33ifRSw5a1AvBF4UwNSOdI4JnRZav1tAvQdnRswij8EvtOUHB7gRTEw7z_o8f1uTxiHFKjqW2hqv4F6SCmA-x0TFyY5rNlMe5NSVgqlnXCdUKXpuLh6ZEEUlrwwyvZeFFQrcfgqFyn0j-HxvtlLlORaL4uUg3KpquCcCVza3kjcK_jBRkdysCNRxTsjBQ2aBxwh32kYy0Iub6OsaTzpTnQHqoNOPG_FOudQ6gfqYtegDqXX58HM63EOACj7jxIQu_kOdm_xqBtc_o53XdfsjsZvkWc5GixEesEQ=w1810-h875-ft) no-repeat;
+  margin: 0;
+  padding: 45px 0 0 20px;
+  height: 80px;
+  width: 640px;
+  font-size: 86%;
+  line-height: 1.4;
+}
+
+#siteInfo p{
+  width: 470px;
+}
+
+/*-------- Second page ------ */
+
+#h1-logo a{
+  margin: 0;
+  padding: 0;
+  background: url(https://lh3.googleusercontent.com/6Bu3SmaHqz1oCGQ4STY1Jne6kZn3zbgaJ1_Mz4N6I-ewInDue1XBaF-X7BSedhL0PjvE30jncn3JRxuEr7iXP0A3QXTU8r8nYb1uRLsBR7axyfLa2aSvXn-3rM5Aop4aGuwBvF6iAt8dvmi5823yM3MqStJl7_tYYOmljdhE2iHQZJ90YAhhyoRa9gpEN03n9AI9zdKkTEYx2LdvhTdhIoEVjMtI94ETQX1qlo9MWxANBJ7E3DEScs9HSpPc8ksi7BaHOvURSsxCAcDK404vYWpym0ysMBHPn9xy5DcSLdTpS-5WJUmM3Ac0L8u1cWfi1r6OOCdz0da2teLdFmVvw8itt4TwfN5-ceLwqB7ZtQ0d8RTYdb609CgtuQptppQxMMF9SMgfCRWcQdUdqfGIn_nW70jhqwFqPtbJgdBgvnA2XLo0CkdD_qAwczbkXjvohykl5M8BpaNudEESiHXCuQ2lOfALwyPSaiv_NyItzbPYnfFqrhcK5XRHhPrpFxS7_iOaKyn5Uplh-sibs1MCegOhkWWmCnzpBR140RSOPn9yR9HN395nfDPsnbbLbHDwdNGwdqlTvLU8QjK1asrXrs3137TP28h61zWGYJ-PnkkHIc74jeGTh42u8JwiDQ7HGigyN-C-lJHJyf2LivKLG5KcVENg9rKshwzCZfqwb1GHRkNR3gIIKPnkhmAxL0OA6tAByg=w1810-h875-ft) no-repeat;
+  background-position: center center;  
+  display:block;
+  height: 130px;
+  width: 640px;
+}
 
 
+#sub-menu li a{
+  background: url(https://www.sekaiseifuku-zzz.com/sp/img/common/icon-arrow.png) no-repeat;
+  background-position:  95% 50%;
+  border-bottom:1px solid #cccccc;
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+  font-size: 150%;
+  font-weight: bold;
+  color: #000000;
+  overflow: hidden;
+}
 
-<div id="contents">
-  <div id="movie">
-  <ul id="sub-menu" class="movie-list">
-      <li>
-        <h3><a class='youtube' href="https://nontapat5130.github.io/anime/anime/uq9" title="Koufuku ตอนที่1"><img src="https://www.sekaiseifuku-zzz.com//img/movie/thumb15.jpg" height="108" width="300" alt="新予告:第13話「新・ズヴィズダー大作戦」">Koufuku ตอนที่1</a></h3>
-      </li>
-      <li></a></h3>
-      </li>
-      <li>
-        <h3><a class='youtube' href="http://www.youtube.com/embed/0uaynwugHyY?rel=0&amp;wmode=transparent&amp;autoplay=1&amp;vq=hd720" title="CM：「新・ズヴィズダー大作戦」"><img src="https://www.sekaiseifuku-zzz.com//img/movie/thumb14.jpg" height="108" width="300" alt="CM：「新・ズヴィズダー大作戦」">Koufuku ตอนที่2</a></h3>
-      </li>
-      <li>
-        <h3><a class='youtube' href="http://www.youtube.com/embed/mN6uOJHwKi0?rel=0&amp;wmode=transparent&amp;autoplay=1&amp;vq=hd720" title="予告:第13話「新・ズヴィズダー大作戦」"><img src="https://www.sekaiseifuku-zzz.com//img/movie/thumb13.jpg" height="108" width="300" alt="予告:第13話「新・ズヴィズダー大作戦」">Koufuku ตอนที่3</a></h3>
-      </li>
-      <li>
-        <h3><a class='youtube' href="http://www.youtube.com/embed/uwP7-UP_l70?rel=0&amp;wmode=transparent&amp;autoplay=1&amp;vq=hd720" title="CM：第1弾"><img src="https://www.sekaiseifuku-zzz.com//img/movie/thumb01.jpg" height="108" width="300" alt="CM：第1弾">Koufuku ตอนที่4</a></h3>
-      </li>
-      <li>
-        <h3><a class='youtube' href="http://www.youtube.com/embed/fblGx16ZrVM?rel=0&amp;wmode=transparent&amp;autoplay=1&amp;vq=hd720" title="CM：第2弾"><img src="https://www.sekaiseifuku-zzz.com//img/movie/thumb02.jpg" height="108" width="300" alt="CM：第2弾">Koufuku ตอนที่5</a></h3>
-      </li>
-      <li>
-        
-        <h3><a class='youtube' href="http://www.youtube.com/embed/lvuVIeFYv8Y?rel=0&amp;wmode=transparent&amp;autoplay=1&amp;vq=hd720" title="キャストムービー：第5弾"><img src="https://www.sekaiseifuku-zzz.com//img/movie/thumb12.jpg" height="108" width="300" alt="キャストムービー：第5弾">Koufuku ตอนที่5</a></h3>
-      </li>
-    </ul>
-  </div><!-- movie -->
+#sub-menu li small{
+  color: #201e23;
+}
 
-
- 
-  <div id="siteInfo">
-     <p class="hidden">(C)HELGO ANIME</p>
-    
-    
-  </div><!-- siteInfo -->
-  
- 
-</footer>
-
-    
-
-</div><!-- wrap -->
-<script>
-  $(".youtube").colorbox({iframe:true, innerWidth:600, innerHeight:338});
-</script>
-
-
-</body>
-</html>
+.bt-back a{
+  -webkit-box-shadow: 4px 4px 0px #000;
+  -moz-box-shadow: 4px 4px 0px #000;
+  box-shadow: 4px 4px 0px #000;
+  background-color: #ff0088;
+  border: 2px solid #000;
+  color: #000;
+  display: block;
+  font-size: 150%;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 20px auto 40px auto;
+  padding-top: 12px;
+  text-align: center;
+  height: 40px;
+  width: 90%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=3,enabled=true)";
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=3,enabled=true); /* IE5.5+ */
+}
