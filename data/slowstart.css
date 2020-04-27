@@ -1,0 +1,5528 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "MetropolisThin";
+  src: url("https://slowstart-usa.com/shared/fonts/MetropolisThin/metropolis-thin.eot?") format("eot"), url("https://slowstart-usa.com/shared/fonts/MetropolisThin/metropolis-thin.woff2") format("woff2"), url("https://slowstart-usa.com/shared/fonts/MetropolisThin/metropolis-thin.woff") format("woff"); }
+@font-face {
+  font-family: "MetropolisRegular";
+  src: url("https://slowstart-usa.com/shared/fonts/MetropolisRegular/metropolis-regular.eot?") format("eot"), url("https://slowstart-usa.com/shared/fonts/MetropolisRegular/metropolis-regular.woff2") format("woff2"), url("https://slowstart-usa.com/shared/fonts/MetropolisRegular/metropolis-regular.woff") format("woff"); }
+@font-face {
+  font-family: "NotoSans-regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://slowstart-usa.com/shared/fonts/NotoSansCJKjp/NotoSansCJKjp-Regular.eot");
+  src: url("https://slowstart-usa.com/shared/fonts/NotoSansCJKjp/NotoSansCJKjp-Regular.eot?#iefix") format("embedded-opentype"), url("https://slowstart-usa.com/shared/fonts/NotoSansCJKjp/NotoSansCJKjp-Regular.woff") format("woff"), url("https://slowstart-usa.com/shared/fonts/NotoSansCJKjp/NotoSansCJKjp-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "NotoSans-bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://slowstart-usa.com/shared/fonts/NotoSansCJKjp/NotoSansCJKjp-Bold.eot");
+  src: url("https://slowstart-usa.com/shared/fonts/NotoSansCJKjp/NotoSansCJKjp-Bold.eot?#iefix") format("embedded-opentype"), url("https://slowstart-usa.com/shared/fonts/NotoSansCJKjp/NotoSansCJKjp-Bold.woff") format("woff"), url("https://slowstart-usa.com/shared/fonts/NotoSansCJKjp/NotoSansCJKjp-Bold.ttf") format("truetype"); }
+.clearfix {
+  zoom: 1; }
+  .clearfix:after {
+    content: "";
+    clear: both;
+    display: block; }
+
+
+body {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+  font-family: "YakuHanJPs", "NotoSans-regular", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック", sans-serif;
+  font-weight: normal;
+  background-color: #ffffff;
+  color: #000000; }
+  body:before, body:after {
+    display: none !important; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+a {
+  outline: none;
+  text-decoration: none; }
+
+a:link, a:visited {
+  color: #005D65; }
+
+a:hover, a:active {
+  color: #005D65;
+  text-decoration: underline; }
+
+img {
+  vertical-align: top; }
+
+body, html {
+  width: 100%;
+  height: 100%; }
+
+.l-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 1050px;
+  z-index: 1; }
+
+.l-inner {
+  position: relative;
+  margin: 0 auto;
+  zoom: 1; }
+  .l-inner:after {
+    content: "";
+    clear: both;
+    display: block; }
+
+.l-senction {
+  width: 100%;
+  position: relative; }
+
+#googlecode {
+  position: fixed;
+  left: 0;
+  top: -500px;
+  z-index: 0; }
+
+#pagetop {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0; }
+
+a:link, a:visited {
+  color: #000000;
+  text-decoration: underline; }
+
+a:hover, a:active {
+  color: #666666;
+  text-decoration: none; }
+
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  vertical-align: top; }
+
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8020; }
+
+.fancybox-skin {
+  position: relative;
+  background: #f9f9f9;
+  color: #444;
+  text-shadow: none;
+  border-radius: 0px;
+  background-color: transparent; }
+
+.fancybox-opened {
+  z-index: 8030; }
+
+.fancybox-opened .fancybox-skin {
+  /*-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) */
+  /*-moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) */
+  /*box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) */ }
+
+.fancybox-outer, .fancybox-inner {
+  position: relative; }
+
+.fancybox-inner {
+  /*overflow: hidden */ }
+
+.fancybox-type-iframe .fancybox-inner {
+  /*-webkit-overflow-scrolling: touch */ }
+
+.fancybox-error {
+  color: #444;
+  font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 15px;
+  white-space: nowrap; }
+
+.fancybox-image, .fancybox-iframe {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%; }
+
+#fancybox-loading {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  cursor: pointer;
+  z-index: 8060; }
+
+#fancybox-loading div {
+  width: 44px;
+  height: 44px;
+  background: url("https://slowstart-usa.com/sharedhttps://slowstart-usa.com/shared/images/fancybox/fancybox_loading.gif") center center no-repeat; }
+
+.fancybox-close {
+  background-image: url("");
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 8040;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+
+.fancybox-close:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+
+@media screen and (max-width: 800px) {
+  .fancybox-close {
+    background-image: url(" ");
+    background-size: 100% auto;
+    width: 80px;
+    height: 80px;
+    bottom: -130px; }
+
+  .fancybox-wrap {
+    margin-top: 0px; }
+
+  .fancybox-nav {
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent url("https://slowstart-usa.com/shared/images/fancybox/blank.gif");
+    -webkit-tap-highlight-color: transparent;
+    z-index: 8040; } }
+.fancybox-prev {
+  left: 0; }
+
+.fancybox-next {
+  right: 0; }
+
+.fancybox-nav span {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 34px;
+  margin-top: -18px;
+  cursor: pointer;
+  z-index: 8040;
+  visibility: hidden; }
+
+.fancybox-prev span {
+  left: 10px;
+  background-position: 0 -36px; }
+
+.fancybox-next span {
+  right: 10px;
+  background-position: 0 -72px; }
+
+.fancybox-nav:hover span {
+  visibility: visible; }
+
+.fancybox-tmp {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  /*overflow: visible !important */ }
+
+/* Overlay helper */
+.fancybox-lock {
+  /*overflow: hidden !important */
+  width: auto; }
+
+.fancybox-lock body {
+  /*overflow: hidden !important */ }
+
+.fancybox-lock-test {
+  /*overflow-y: hidden !important */ }
+
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*overflow: hidden */
+  display: none;
+  z-index: 8010;
+  background: url("https://slowstart-usa.com/shared/images/fancybox/fancybox_overlay.png"); }
+
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0; }
+
+.fancybox-lock .fancybox-overlay {
+  /*overflow: auto */
+  /*overflow-y: scroll */ }
+
+/* Title helper */
+.fancybox-title {
+  visibility: hidden;
+  font: normal 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  text-shadow: none;
+  z-index: 8050; }
+
+.fancybox-opened .fancybox-title {
+  visibility: visible; }
+
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 8050;
+  text-align: center; }
+
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px #222;
+  color: #FFF;
+  font-weight: bold;
+  line-height: 24px;
+  white-space: nowrap; }
+
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: #fff; }
+
+.fancybox-title-inside-wrap {
+  padding-top: 10px; }
+
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8); }
+
+.sp .fancybox-close {
+  background-image: url("https://slowstart-usa.com/shared/images/fancybox/fancybox_close.png");
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  z-index: 8040;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+
+#loader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 1000;
+  overflow: hidden;
+  background: #ffffff; }
+  #loader .l-inner {
+    width: 100%;
+    height: 100%; }
+
+.loader_wrap {
+  width: 46px;
+  height: 85px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -23px;
+  display: none; }
+
+.loader_inner {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .loader_inner:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 11px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    background: url("https://slowstart-usa.com/shared/images/common/loader_bg1.png") no-repeat center center; }
+  .loader_inner:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    background: url("https://slowstart-usa.com/shared/images/common/loader_bg_cover.png") no-repeat center center; }
+
+.loader_1 {
+  width: 48px;
+  height: 77px;
+  background: url("https://slowstart-usa.com/shared/images/common/loader_chara1.png") no-repeat center center;
+  position: absolute;
+  left: -3px;
+  top: 5px;
+  z-index: 1; }
+
+.l-header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+  width: 180px;
+  left: -180px;
+  bottom: auto; }
+  .l-header .l-inner {
+    width: 100%;
+    padding-bottom: 30px; }
+  .l-header.nonefixed {
+    position: absolute; }
+  .l-header.fixedbottom {
+    top: auto;
+    bottom: 0; }
+  .l-header.topminpos {
+    top: -90px; }
+    .l-header.topminpos .hd_nav a {
+      padding-top: 14px;
+      padding-bottom: 16px; }
+
+.hd_nav {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 20px 20px 0px / 0px 20px 20px 0px;
+  -webkit-border-top-left-radius: 0px 0px;
+  -webkit-border-top-right-radius: 20px 20px;
+  -webkit-border-bottom-right-radius: 20px 20px;
+  -webkit-border-bottom-left-radius: 0px 0px;
+  -moz-border-radius-topleft: 0px 0px;
+  -moz-border-radius-topright: 20px 20px;
+  -moz-border-radius-bottomright: 20px 20px;
+  -moz-border-radius-bottomleft: 0px 0px;
+  overflow: hidden;
+  margin-bottom: 20px; }
+  .hd_nav ul, .hd_nav li {
+    line-height: 1em; }
+  .hd_nav a {
+    display: block;
+    padding: 20px 0 22px 42px;
+    position: relative; }
+    .hd_nav a span {
+      display: block;
+      height: 100%;
+      width: 6px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 3;
+      overflow: hidden; }
+      .hd_nav a span:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 42px;
+        top: 0px;
+        z-index: 3;
+        width: 100%;
+        height: 100%; }
+      .hd_nav a span:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        background: url("https://slowstart-usa.com/shared/images/common/hd_nav_icon_cr.png") no-repeat left center; }
+  .hd_nav li {
+    position: relative; }
+    .hd_nav li:after {
+      content: " ";
+      display: block;
+      height: 2px;
+      width: 154px;
+      background-color: #f8f3ef;
+      position: absolute;
+      left: 16px;
+      bottom: 0px;
+      z-index: 0; }
+    .hd_nav li:last-child:after {
+      background: none; }
+    .hd_nav li:last-child a {
+      padding-bottom: 20px; }
+    .hd_nav li img {
+      position: relative;
+      z-index: 2; }
+  .hd_nav .current {
+    pointer-events: none; }
+    .hd_nav .current span {
+      width: 100%; }
+  .hd_nav .nav_news a span {
+    background-color: #ff8b46; }
+    .hd_nav .nav_news a span:after {
+      background: url(" ") no-repeat left 20px; }
+  .hd_nav .nav_story a span {
+    background-color: #ffc71d; }
+    .hd_nav .nav_story a span:after {
+      background: url(" ") no-repeat left 20px; }
+  .hd_nav .nav_character a span {
+    background-color: #d4f00f; }
+    .hd_nav .nav_character a span:after {
+      background: url(" ") no-repeat left 20px; }
+  .hd_nav .nav_staff a span {
+    background-color: #b1c6ff; }
+    .hd_nav .nav_staff a span:after {
+      background: url(" ") no-repeat left 20px; }
+  .hd_nav .nav_onair a span {
+    background-color: #dcb5ff; }
+    .hd_nav .nav_onair a span:after {
+      background: url(" ") no-repeat left 20px; }
+  .hd_nav .nav_music a span {
+    background-color: #ff9fab; }
+    .hd_nav .nav_music a span:after {
+      background: url(" ") no-repeat left 20px; }
+  .hd_nav .nav_movie a span {
+    background-color: #acf0dc; }
+    .hd_nav .nav_movie a span:after {
+      background: url(" ") no-repeat left 20px; }
+  .hd_nav .nav_special a span {
+    background-color: #f9dba7; }
+    .hd_nav .nav_special a span:after {
+      background: url(" ") no-repeat left 20px; }
+  .hd_nav .nav_comics a span {
+    background-color: #b5e8a4; }
+    .hd_nav .nav_comics a span:after {
+      background: url(" ") no-repeat left 20px; }
+  .hd_nav .hover:after {
+    width: 6px;
+    -webkit-transition: width 0.3s;
+            transition: width 0.3s; }
+  .hd_nav .hover:hover:after {
+    width: 100%;
+    -webkit-transition: width 0.3s;
+            transition: width 0.3s; }
+
+.hd_share {
+  display: table;
+  width: 100%; }
+  .hd_share .share_title {
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    color: #777790;
+    font-size: 8px;
+    -webkit-transform: scale(0.9);
+    -webkit-transform-origin: 0 0;
+    display: table-cell;
+    line-height: 1em;
+    vertical-align: middle;
+    padding-left: 15px; }
+  .hd_share ul {
+    display: table-cell;
+    zoom: 1;
+    vertical-align: middle; }
+    .hd_share ul:after {
+      content: "";
+      clear: both;
+      display: block; }
+  .hd_share li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    display: table;
+    margin: 0 5px; }
+    .hd_share li a {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      background-color: #ffffff;
+      border-radius: 30px;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+      line-height: 1em;
+      font-size: 0;
+      width: 100%;
+      height: 100%; }
+
+.sp_hd_logo {
+  display: none; }
+
+.l-footer {
+  width: 100%;
+  min-width: 1080px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff; }
+  .l-footer.fixed {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    z-index: 0; }
+  .l-footer .l-inner {
+    width: 1080px;
+    text-align: center;
+    padding: 40px 80px; }
+
+.ft_nav {
+  letter-spacing: -0.75em;
+  margin-bottom: 35px; }
+  .ft_nav li {
+    letter-spacing: normal;
+    font-size: 14px;
+    display: inline-block;
+    margin: 0 25px; }
+  .ft_nav a {
+    text-decoration: none;
+    color: #777790;
+    letter-spacing: 0.1em; }
+
+.ft_copyright {
+  line-height: 1em;
+  font-size: 0; }
+
+.m-button {
+  text-decoration: none;
+  line-height: 1em;
+  color: #777790 !important;
+  border: #777790 solid 2px;
+  padding: 15px 100px 18px 100px;
+  font-size: 16px;
+  text-decoration: none !important;
+  border-radius: 200px;
+  display: inline-block;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: background-color 0.3s;
+          transition: background-color 0.3s;
+  text-align: center; }
+  .m-button:hover {
+    color: #ffffff !important;
+    background-color: #777790;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: background-color 0.3s;
+            transition: background-color 0.3s;
+    text-decoration: none; }
+
+#top-page .l-header .l-inner {
+  padding-top: 100px; }
+#top-page .main {
+  width: 100%;
+  min-width: 1080px;
+  position: relative; }
+  #top-page .main .l-inner {
+    width: 100%;
+    min-width: 100%; }
+  #top-page .main:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 109px;
+    background: url(" ") no-repeat center top;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1; }
+#top-page .main_logo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+  width: 100%;
+  margin: 35% auto 0 auto;
+  text-align: center;
+  padding-left: 5%; }
+#top-page .main_visual {
+  position: relative;
+  z-index: 0;
+  pointer-events: none; }
+#top-page .main_copy {
+  position: absolute;
+  left: 35px;
+  top: 36px;
+  z-index: 2;
+  width: 533px;
+  height: 22px;
+  display: none; }
+  #top-page .main_copy span {
+    background: url(" ") no-repeat left top;
+    position: absolute;
+    z-index: 0;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    display: block; }
+  #top-page .main_copy .i1,
+  #top-page .main_copy .i2,
+  #top-page .main_copy .i3,
+  #top-page .main_copy .i4,
+  #top-page .main_copy .i5,
+  #top-page .main_copy .i6,
+  #top-page .main_copy .i7,
+  #top-page .main_copy .i8,
+  #top-page .main_copy .i9,
+  #top-page .main_copy .i10,
+  #top-page .main_copy .i11,
+  #top-page .main_copy .i12,
+  #top-page .main_copy .i13,
+  #top-page .main_copy .i14,
+  #top-page .main_copy .i15 {
+    width: 40px;
+    height: 25px; }
+  #top-page .main_copy .i1 {
+    background-position: 0 0;
+    left: 0; }
+  #top-page .main_copy .i2 {
+    background-position: -32px 0;
+    left: 32px; }
+  #top-page .main_copy .i3 {
+    background-position: -69px 0;
+    left: 69px; }
+  #top-page .main_copy .i4 {
+    background-position: -107px 0;
+    left: 107px; }
+  #top-page .main_copy .i5 {
+    background-position: -146px 0;
+    left: 146px; }
+  #top-page .main_copy .i6 {
+    background-position: -177px 0;
+    left: 177px; }
+  #top-page .main_copy .i7 {
+    background-position: -222px 0;
+    left: 222px; }
+  #top-page .main_copy .i8 {
+    background-position: -260px 0;
+    left: 260px; }
+  #top-page .main_copy .i9 {
+    background-position: -298px 0;
+    left: 298px; }
+  #top-page .main_copy .i10 {
+    background-position: -337px 0;
+    left: 337px; }
+  #top-page .main_copy .i11 {
+    background-position: -374px 0;
+    left: 374px; }
+  #top-page .main_copy .i12 {
+    background-position: -414px 0;
+    left: 414px; }
+  #top-page .main_copy .i13 {
+    background-position: -450px 0;
+    left: 450px; }
+  #top-page .main_copy .i14 {
+    background-position: -489px 0;
+    left: 489px; }
+  #top-page .main_copy .i15 {
+    background-position: -509px 0;
+    left: 509px;
+    width: 26px;
+    height: 24px; }
+#top-page .main_date {
+  width: 226px;
+  height: 226px;
+  position: absolute;
+  right: 45px;
+  bottom: -30px;
+  z-index: 2;
+  display: table;
+  overflow: hidden; }
+  #top-page .main_date span {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1; }
+  #top-page .main_date .bg {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 0;
+    width: 216px;
+    height: 216px; }
+#top-page .information {
+  width: auto;
+  padding-left: 180px;
+  min-width: 1080px;
+  background: url(" ") repeat top center; }
+  #top-page .information .l-inner {
+    width: 820px;
+    padding: 70px 0 50px 0;
+    border: none; }
+#top-page .information_banner {
+  zoom: 1;
+  margin-bottom: 50px; }
+  #top-page .information_banner:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #top-page .information_banner li {
+    float: left;
+    margin: 0 12px 0 0;
+    background-color: #FCFAF9;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 196px;
+    height: 80px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.08) inset;
+    -moz-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.08) inset;
+    -webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.08) inset;
+    border: #DFDFE7 solid 1px; }
+    #top-page .information_banner li:last-child {
+      margin-right: 0; }
+#top-page .information_news {
+  zoom: 1; }
+  #top-page .information_news:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #top-page .information_news h3 {
+    font-size: 24px;
+    color: #777790;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    line-height: 1em;
+    margin-bottom: 22px; }
+  #top-page .information_news .news_wrap {
+    width: 490px;
+    float: left; }
+    #top-page .information_news .news_wrap ul {
+      margin-bottom: 30px; }
+    #top-page .information_news .news_wrap li {
+      position: relative;
+      margin-bottom: 16px; }
+      #top-page .information_news .news_wrap li:last-child {
+        margin-bottom: 0; }
+      #top-page .information_news .news_wrap li a {
+        display: block;
+        margin-left: 70px;
+        position: relative;
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 10px 0; }
+        #top-page .information_news .news_wrap li a:before {
+          content: " ";
+          display: block;
+          position: absolute;
+          left: -18px;
+          top: 50%;
+          margin-top: -5px;
+          border: 9px solid transparent; }
+      #top-page .information_news .news_wrap li:after {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 50%; }
+      #top-page .information_news .news_wrap li span {
+        display: block;
+        margin: 0 20px; }
+      #top-page .information_news .news_wrap li .text {
+        color: #777790;
+        line-height: 1.6em;
+        font-size: 12px; }
+      #top-page .information_news .news_wrap li .date {
+        color: #aaaac0;
+        font-size: 10px;
+        line-height: 1em;
+        margin-bottom: 5px; }
+      #top-page .information_news .news_wrap li:nth-child(1):after {
+        background: url("https://slowstart-usa.com/shared/images/top/news_icon1.png") no-repeat center center;
+        width: 54px;
+        height: 63px;
+        left: -7px;
+        margin-top: -30px; }
+      #top-page .information_news .news_wrap li:nth-child(1) a {
+        background-color: #fff8e1; }
+        #top-page .information_news .news_wrap li:nth-child(1) a:before {
+          border-right: 9px solid #fff8e1; }
+      #top-page .information_news .news_wrap li:nth-child(2):after {
+        background: url("https://slowstart-usa.com/shared/images/top/news_icon2.png") no-repeat center center;
+        width: 79px;
+        height: 65px;
+        left: -13px;
+        margin-top: -37px; }
+      #top-page .information_news .news_wrap li:nth-child(2) a {
+        background-color: #fff0e6; }
+        #top-page .information_news .news_wrap li:nth-child(2) a:before {
+          border-right: 9px solid #fff0e6; }
+      #top-page .information_news .news_wrap li:nth-child(3):after {
+        background: url("https://slowstart-usa.com/shared/images/top/news_icon3.png") no-repeat center center;
+        width: 46px;
+        height: 58px;
+        left: 0;
+        margin-top: -31px; }
+      #top-page .information_news .news_wrap li:nth-child(3) a {
+        background-color: #f7fdde; }
+        #top-page .information_news .news_wrap li:nth-child(3) a:before {
+          border-right: 9px solid #f7fdde; }
+      #top-page .information_news .news_wrap li:nth-child(4):after {
+        background: url("https://slowstart-usa.com/shared/images/top/news_icon4.png") no-repeat center center;
+        width: 53px;
+        height: 67px;
+        left: -1px;
+        margin-top: -40px; }
+      #top-page .information_news .news_wrap li:nth-child(4) a {
+        background-color: #f4f6fe; }
+        #top-page .information_news .news_wrap li:nth-child(4) a:before {
+          border-right: 9px solid #f4f6fe; }
+    #top-page .information_news .news_wrap .news_btn a {
+      text-decoration: none;
+      line-height: 1em;
+      color: #777790;
+      border: #777790 solid 2px;
+      padding: 12px 30px;
+      font-size: 12px;
+      background-color: #ffffff;
+      border-radius: 50px;
+      font-family: "NotoSans-bold", sans-serif;
+      color: #777790;
+      line-height: 1em;
+      background-color: transparent;
+      -webkit-transition: background-color 0.3s, color 0.3s;
+              transition: background-color 0.3s, color 0.3s; }
+      #top-page .information_news .news_wrap .news_btn a:hover {
+        color: #ffffff;
+        background-color: #777790;
+        -webkit-transition: background-color 0.3s, color 0.3s;
+                transition: background-color 0.3s, color 0.3s; }
+  #top-page .information_news .tweet_wrap {
+    width: 300px;
+    float: right;
+    border: #e4e4e9 solid 1px;
+    border-radius: 10px;
+    overflow: hidden; }
+#top-page .story {
+  width: auto;
+  padding-left: 180px;
+  height: 906px;
+  min-width: 1080px;
+  background: url(" ") repeat top center;
+  position: relative;
+  display: block;
+  overflow: hidden; }
+  #top-page .story .l-inner {
+    width: 820px;
+    height: 100%;
+    z-index: 1; }
+  #top-page .story .l-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0; }
+  #top-page .story .movie_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    #top-page .story .movie_wrap:after {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      background-color: rgba(119, 119, 144, 0.4); }
+  #top-page .story #movie-player {
+    position: absolute;
+    z-index: 0; }
+  #top-page .story .movie_img_def {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    background-size: cover;
+    background-position: center center; }
+  #top-page .story .mask_target {
+    -webkit-mask-image: url("");
+            mask-image: url("");
+    -webkit-mask-position: center top;
+            mask-position: center top;
+    -webkit-mask-size: cover;
+            mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat; }
+  #top-page .story .mask_shape {
+    height: 0; }
+#top-page .story_intro {
+  position: relative;
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: -50px;
+  z-index: 0;
+  width: 100%; }
+  #top-page .story_intro h3 {
+    line-height: 1em;
+    font-size: 24px;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    letter-spacing: 0.16em;
+    position: relative;
+    display: inline-block;
+    margin: 0 0 40px 325px; }
+    #top-page .story_intro h3:after {
+      content: " ";
+      display: block;
+      background: url(" ") repeat-x left center;
+      width: 100%;
+      height: 7px;
+      position: absolute;
+      left: 0px;
+      bottom: -15px;
+      z-index: 0; }
+  #top-page .story_intro .text {
+    margin: 0 0 0 325px; }
+  #top-page .story_intro .btn_pv {
+    position: absolute;
+    left: 0px;
+    top: 212px;
+    z-index: 1; }
+    #top-page .story_intro .btn_pv a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-family: "NotoSans-bold", sans-serif;
+      letter-spacing: 0.1em;
+      background: url("https://slowstart-usa.com/shared/images/common/icon_arw_w1.png") no-repeat 25px center;
+      border: 2px solid #ffffff;
+      padding: 13px 30px 13px 55px;
+      border-radius: 30px; }
+#top-page .story_block {
+  display: block;
+  margin-top: 135px;
+  width: 700px;
+  height: 465px;
+  position: relative;
+  margin-left: 60px;
+  position: relative; }
+  #top-page .story_block .property {
+    display: none; }
+#top-page .story_format {
+  display: none;
+  color: #ffffff;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  width: 100%; }
+  #top-page .story_format h4 {
+    font-size: 30px;
+    margin-bottom: 10px; }
+    #top-page .story_format h4 span {
+      display: inline-block;
+      width: 119px;
+      height: 110px;
+      background: url("https://slowstart-usa.com/shared/images/top/story_bg_num.png") no-repeat center center;
+      margin-right: 20px;
+      font-size: 14px;
+      text-align: center;
+      text-indent: -10px;
+      letter-spacing: 0.05em;
+      line-height: 1em;
+      padding-top: 17px;
+      font-family: "MetropolisRegular", sans-serif; }
+    #top-page .story_format h4 i {
+      font-family: "MetropolisThin", sans-serif;
+      font-size: 60px;
+      display: block;
+      letter-spacing: normal;
+      line-height: 60px;
+      padding-top: 3px; }
+  #top-page .story_format .detail_wrap {
+    zoom: 1; }
+    #top-page .story_format .detail_wrap:after {
+      content: "";
+      clear: both;
+      display: block; }
+  #top-page .story_format .detail_img {
+    width: 410px;
+    float: left; }
+  #top-page .story_format .img_large {
+    width: 410px;
+    height: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative; }
+    #top-page .story_format .img_large p {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 0; }
+    #top-page .story_format .img_large .cr {
+      z-index: 1; }
+  #top-page .story_format .img_list {
+    zoom: 1; }
+    #top-page .story_format .img_list:after {
+      content: "";
+      clear: both;
+      display: block; }
+    #top-page .story_format .img_list li {
+      width: 130px;
+      height: 73px;
+      overflow: hidden;
+      border-radius: 10px;
+      float: left;
+      margin-right: 10px;
+      background-color: #ffa9be; }
+      #top-page .story_format .img_list li:last-child {
+        margin-right: 0; }
+    #top-page .story_format .img_list .cr a {
+      pointer-events: none; }
+    #top-page .story_format .img_list .cr img {
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+      -ms-filter: "alpha(opacity=60)";
+      -moz-opacity: 0.6;
+      -khtml-opacity: 0.6; }
+  #top-page .story_format .detail_text {
+    width: 270px;
+    float: right;
+    font-size: 12px;
+    line-height: 1.8em;
+    position: relative; }
+    #top-page .story_format .detail_text .text {
+      margin-bottom: 15px; }
+  #top-page .story_format .btn_movie a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "NotoSans-bold", sans-serif;
+    letter-spacing: 0.1em;
+    background: url("https://slowstart-usa.com/shared/images/common/icon_arw_w1.png") no-repeat 25px center;
+    border: 2px solid #ffffff;
+    padding: 13px 30px 13px 55px;
+    border-radius: 30px;
+    text-align: center; }
+#top-page .story_nav {
+  border-top: #ffffff solid 2px;
+  padding-top: 30px;
+  width: 710px;
+  margin-left: 60px; }
+  #top-page .story_nav.none {
+    pointer-events: none; }
+  #top-page .story_nav ul {
+    zoom: 1; }
+    #top-page .story_nav ul:after {
+      content: "";
+      clear: both;
+      display: block; }
+  #top-page .story_nav li {
+    float: left;
+    width: 84px;
+    margin-right: 10px;
+    margin-bottom: 10px; }
+    #top-page .story_nav li:nth-child(7n) {
+      margin-right: 0; }
+    #top-page .story_nav li a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      border: 2px solid #ffffff;
+      border-radius: 30px;
+      text-align: center;
+      line-height: 1em;
+      font-size: 20px;
+      height: 40px;
+      padding: 11px 0;
+      letter-spacing: 0.05em;
+      font-family: "MetropolisRegular", sans-serif; }
+      #top-page .story_nav li a:hover {
+        color: #777790;
+        background-color: #ffffff;
+        -webkit-transition: background-color 0.3s, color 0.3s;
+                transition: background-color 0.3s, color 0.3s; }
+    #top-page .story_nav li span {
+      display: block;
+      line-height: 20px;
+      margin-top: -3px; }
+    #top-page .story_nav li i {
+      font-size: 9px;
+      line-height: 9px;
+      display: inline;
+      vertical-align: middle; }
+    #top-page .story_nav li.current {
+      pointer-events: none; }
+      #top-page .story_nav li.current a {
+        color: #777790;
+        background-color: #ffffff; }
+  #top-page .story_nav .btn_00 {
+    width: 136px; }
+    #top-page .story_nav .btn_00 a {
+      font-size: 13px;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      letter-spacing: 0.1em; }
+  #top-page .story_nav .btn_07 {
+    margin-left: 146px; }
+#top-page .story_paging.none {
+  pointer-events: none; }
+#top-page .story_paging li {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 40px; }
+#top-page .story_paging .prev {
+  position: absolute;
+  left: 0px;
+  top: 260px;
+  z-index: 1; }
+#top-page .story_paging .next {
+  position: absolute;
+  right: 0px;
+  top: 260px;
+  z-index: 1; }
+#top-page .story_paging .last {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -ms-filter: "alpha(opacity=50)";
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  pointer-events: none; }
+#top-page .character {
+  width: auto;
+  padding-left: 180px;
+  min-width: 1080px;
+  background: #ffa9be url(" ") repeat top center; }
+  #top-page .character:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 88px;
+    position: absolute;
+    left: 0px;
+    top: -88px;
+    z-index: 1;
+    background: url(" ") no-repeat bottom center; }
+  #top-page .character .l-inner {
+    width: 820px; }
+  #top-page .character h3 {
+    line-height: 1em;
+    font-size: 24px;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    letter-spacing: 0.16em;
+    position: relative;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    z-index: 0; }
+    #top-page .character h3:after {
+      content: " ";
+      display: block;
+      background: url("https://slowstart-usa.com/shared/images/common/line_wave_w.png") repeat-x left center;
+      width: 100%;
+      height: 7px;
+      position: absolute;
+      left: 0px;
+      bottom: -15px;
+      z-index: 0; }
+#top-page .character_main {
+  position: relative;
+  z-index: 1; }
+  #top-page .character_main a {
+    position: relative;
+    display: block; }
+  #top-page .character_main .hana {
+    position: absolute;
+    left: 272px;
+    top: 327px;
+    z-index: 2; }
+    #top-page .character_main .hana .name {
+      position: absolute;
+      left: 340px;
+      top: 540px;
+      z-index: 0; }
+  #top-page .character_main .tamate {
+    position: absolute;
+    left: 41px;
+    top: 314px;
+    z-index: 1; }
+    #top-page .character_main .tamate .name {
+      position: absolute;
+      left: -60px;
+      top: 555px;
+      z-index: 0; }
+  #top-page .character_main .kamuri {
+    position: absolute;
+    left: 110px;
+    top: 15px;
+    z-index: 0; }
+    #top-page .character_main .kamuri .name {
+      position: absolute;
+      left: -220px;
+      top: 240px;
+      z-index: 0; }
+  #top-page .character_main .eiko {
+    position: absolute;
+    left: 300px;
+    top: 75px;
+    z-index: 0; }
+    #top-page .character_main .eiko .name {
+      position: absolute;
+      left: 342px;
+      top: 56px;
+      z-index: 0; }
+#top-page .character_sub {
+  position: absolute;
+  left: 0px;
+  top: 1070px;
+  z-index: 0;
+  width: 100%; }
+  #top-page .character_sub ul {
+    width: 740px;
+    zoom: 1;
+    display: block;
+    margin: 0 auto; }
+    #top-page .character_sub ul:after {
+      content: "";
+      clear: both;
+      display: block; }
+  #top-page .character_sub li {
+    width: 216px;
+    float: left;
+    margin: 0 15px;
+    text-align: center; }
+  #top-page .character_sub span {
+    display: block; }
+  #top-page .character_sub .ph {
+    margin-bottom: 10px; }
+#top-page .character_more {
+  padding-top: 1470px;
+  padding-bottom: 150px;
+  text-align: center; }
+  #top-page .character_more .btn_more {
+    display: block;
+    width: 250px;
+    margin: 0 auto; }
+    #top-page .character_more .btn_more a {
+      text-decoration: none;
+      line-height: 1em;
+      color: #ffffff;
+      border: #ffffff solid 2px;
+      padding: 12px 30px;
+      font-size: 12px;
+      background-color: none;
+      border-radius: 50px;
+      font-family: "NotoSans-bold", sans-serif;
+      color: #ffffff;
+      background-color: transparent;
+      -webkit-transition: background-color 0.3s, color 0.3s;
+              transition: background-color 0.3s, color 0.3s;
+      font-size: 14px;
+      padding: 15px 0 15px 15px;
+      letter-spacing: 0.05em;
+      display: block; }
+      #top-page .character_more .btn_more a:hover {
+        color: #ffa9be;
+        background-color: #ffffff;
+        -webkit-transition: background-color 0.3s, color 0.3s;
+                transition: background-color 0.3s, color 0.3s; }
+    #top-page .character_more .btn_more.new {
+      padding-top: 66px;
+      position: relative; }
+      #top-page .character_more .btn_more.new:before {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/top/chara_btn_sub_new_sp.png") no-repeat left top;
+        background-size: 100% 100%;
+        width: 151px;
+        height: 66px;
+        position: absolute;
+        left: 73px;
+        top: 0px;
+        z-index: 1; }
+  #top-page .character_more .plus a {
+    background: url("https://slowstart-usa.com/shared/images/common/icon_plus.png") no-repeat 20px center; }
+    #top-page .character_more .plus a:hover {
+      background: #ffffff url("https://slowstart-usa.com/shared/images/common/icon_plus_on.png") no-repeat 20px center; }
+  #top-page .character_more .minus a {
+    background: url("https://slowstart-usa.com/shared/images/common/icon_minus.png") no-repeat 20px center; }
+    #top-page .character_more .minus a:hover {
+      background: #ffffff url("https://slowstart-usa.com/shared/images/common/icon_minus_on.png") no-repeat 20px center; }
+#top-page .character_more_list {
+  width: 100%;
+  margin: 0 auto 30px auto;
+  display: none;
+  letter-spacing: -0.75em; }
+  #top-page .character_more_list li {
+    letter-spacing: normal;
+    display: inline-block;
+    width: 148px;
+    margin: 0 16px 20px 16px;
+    text-align: center; }
+    #top-page .character_more_list li.new .ph:before {
+      content: " ";
+      display: block;
+      width: 44px;
+      height: 42px;
+      background: url("https://slowstart-usa.com/shared/images/common/icon_new.png") no-repeat center center;
+      position: absolute;
+      right: -10px;
+      top: 0px;
+      z-index: 1; }
+  #top-page .character_more_list a {
+    text-decoration: none; }
+  #top-page .character_more_list .ph {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 150px;
+    display: block;
+    margin-bottom: 10px;
+    position: relative; }
+    #top-page .character_more_list .ph img {
+      position: relative;
+      z-index: 0; }
+  #top-page .character_more_list .name_jp {
+	white-space: nowrap;
+    font-size: 14px;
+    color: #777790;
+    display: block;
+    line-height: 1em;
+    margin-bottom: 5px;
+    letter-spacing: 0.05em; }
+  #top-page .character_more_list .name_en {
+    font-size: 9px;
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+    -webkit-transform: scale(0.9);
+    -webkit-transform-origin: 50% 0;
+    color: #777790;
+    display: block;
+    line-height: 1em;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    letter-spacing: 0.15em;
+    white-space: nowrap; }
+#top-page .sc {
+  width: auto;
+  padding-left: 180px;
+  min-width: 1080px;
+  background: #ffffff url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #top-page .sc:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: -80px;
+    z-index: 1;
+    background: url("https://slowstart-usa.com/shared/images/top/bg_staff.png") no-repeat bottom center; }
+  #top-page .sc .l-inner {
+    width: 820px;
+    padding: 90px 0 180px 0;
+    border: none; }
+  #top-page .sc h3 {
+    line-height: 1em;
+    font-size: 24px;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    color: #777790;
+    letter-spacing: 0.16em;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 65px; }
+    #top-page .sc h3:after {
+      content: " ";
+      display: block;
+      background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+      width: 100%;
+      height: 7px;
+      position: absolute;
+      left: 0px;
+      bottom: -15px;
+      z-index: 0; }
+  #top-page .sc h4 {
+    color: #ffa9be;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    width: 150px;
+    border-bottom: #ffa9be solid 2px;
+    line-height: 1.4em;
+    margin-bottom: 30px; }
+#top-page .sc_staff {
+  margin-bottom: 15px; }
+  #top-page .sc_staff ul {
+    display: block;
+    zoom: 1; }
+    #top-page .sc_staff ul:after {
+      content: "";
+      clear: both;
+      display: block; }
+  #top-page .sc_staff li {
+    width: 190px;
+    float: left;
+    color: #777790;
+    margin-right: 20px;
+    margin-bottom: 22px; }
+    #top-page .sc_staff li:nth-child(4n) {
+      margin-right: 0; }
+  #top-page .sc_staff .des {
+    font-size: 10px;
+    font-family: "NotoSans-bold", sans-serif;
+    border-bottom: #777790 solid 2px;
+    line-height: 1.8em;
+    margin-bottom: 5px; }
+  #top-page .sc_staff .name {
+    font-family: "NotoSans-bold", sans-serif;
+    line-height: 1.1em; }
+    #top-page .sc_staff .name span {
+      font-size: 10px;
+      display: block; }
+  #top-page .sc_staff .staff_list1 .name {
+    font-size: 20px; }
+  #top-page .sc_staff .staff_list2 .name {
+    font-size: 16px; }
+  #top-page .sc_staff .staff_list3 li {
+    width: 400px; }
+    #top-page .sc_staff .staff_list3 li:nth-child(2n) {
+      margin-right: 0; }
+  #top-page .sc_staff .staff_list3 .name {
+    font-size: 20px; }
+#top-page .sc_cast ul {
+  display: block;
+  zoom: 1; }
+  #top-page .sc_cast ul:after {
+    content: "";
+    clear: both;
+    display: block; }
+#top-page .sc_cast li {
+  width: 190px;
+  float: left;
+  color: #777790;
+  margin-right: 20px;
+  margin-bottom: 22px;
+  text-align: center; }
+  #top-page .sc_cast li:nth-child(4n) {
+    margin-right: 0; }
+#top-page .sc_cast .name {
+  font-size: 12px;
+  font-family: "NotoSans-bold", sans-serif;
+  border-bottom: #777790 solid 2px;
+  line-height: 2.2em;
+  margin-bottom: 8px; }
+#top-page .sc_cast .cv {
+  font-family: "NotoSans-bold", sans-serif;
+  line-height: 1.1em;
+  font-size: 24px; }
+#top-page .onair {
+  width: auto;
+  padding-left: 180px;
+  min-width: 1080px;
+  height: 540px;
+  background: #ffd451 url("https://slowstart-usa.com/shared/images/common/bg_pattern3.png") repeat top center; }
+  #top-page .onair:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: -80px;
+    z-index: 1;
+    background: url("https://slowstart-usa.com/shared/images/top/bg_onair.png") no-repeat bottom center; }
+  #top-page .onair .l-inner {
+    width: 820px; }
+  #top-page .onair h3 {
+    line-height: 1em;
+    font-size: 24px;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    color: #777790;
+    letter-spacing: 0.16em;
+    position: relative;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    z-index: 0; }
+    #top-page .onair h3:after {
+      content: " ";
+      display: block;
+      background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+      width: 100%;
+      height: 7px;
+      position: absolute;
+      left: 0px;
+      bottom: -15px;
+      z-index: 0; }
+#top-page .onair_comment {
+  position: absolute;
+  left: 87px;
+  top: 105px;
+  z-index: 0;
+  width: 541px;
+  height: 240px; }
+  #top-page .onair_comment .comment_wrap {
+    position: relative; }
+  #top-page .onair_comment .bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0; }
+  #top-page .onair_comment .text {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    z-index: 1;
+    text-align: center;
+    width: 100%; }
+  #top-page .onair_comment .button {
+    position: absolute;
+    left: 0px;
+    top: 150px;
+    z-index: 1;
+    text-align: center;
+    width: 100%; }
+    #top-page .onair_comment .button a {
+      text-decoration: none;
+      line-height: 1em;
+      color: #777790;
+      border: #777790 solid 2px;
+      padding: 12px 30px;
+      font-size: 12px;
+      background-color: #ffffff;
+      border-radius: 50px;
+      font-family: "NotoSans-bold", sans-serif;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      color: #777790;
+      line-height: 1em;
+      background-color: transparent;
+      -webkit-transition: background-color 0.3s, color 0.3s;
+              transition: background-color 0.3s, color 0.3s; }
+      #top-page .onair_comment .button a:hover {
+        color: #ffffff;
+        background-color: #777790;
+        -webkit-transition: background-color 0.3s, color 0.3s;
+                transition: background-color 0.3s, color 0.3s; }
+#top-page .onair_sd {
+  position: absolute;
+  left: 627px;
+  top: 150px;
+  z-index: 0; }
+#top-page .music {
+  width: auto;
+  padding-left: 180px;
+  min-width: 1080px;
+  background: #f5f5f5 url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #top-page .music:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: -80px;
+    z-index: 1;
+    background: url("https://slowstart-usa.com/shared/images/top/bg_music.png") no-repeat bottom center; }
+  #top-page .music .l-inner {
+    width: 820px;
+    padding: 100px 0 160px 0;
+    border: none; }
+  #top-page .music h3 {
+    line-height: 1em;
+    font-size: 24px;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    color: #777790;
+    letter-spacing: 0.16em;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 65px; }
+    #top-page .music h3:after {
+      content: " ";
+      display: block;
+      background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+      width: 100%;
+      height: 7px;
+      position: absolute;
+      left: 0px;
+      bottom: -15px;
+      z-index: 0; }
+#top-page .music_list ul {
+  zoom: 1;
+  display: block; }
+  #top-page .music_list ul:after {
+    content: "";
+    clear: both;
+    display: block; }
+#top-page .music_list li {
+  width: 260px;
+  margin-right: 20px;
+  text-align: center;
+  color: #777790;
+  float: left; }
+  #top-page .music_list li:nth-child(3n) {
+    margin-right: 0; }
+#top-page .music_list a {
+  color: #777790;
+  text-decoration: none; }
+#top-page .music_list span {
+  display: block;
+  line-height: 1em; }
+#top-page .music_list .jacket {
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  width: 260px;
+  height: 260px;
+  background-color: #ffffff;
+  display: table; }
+  #top-page .music_list .jacket p {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    font-size: 15px;
+    color: #9a9a9a;
+    background-color: #f5f5f5;
+    border: 5px solid #ffffff;
+    box-sizing: border-box; }
+#top-page .music_list .genre {
+  font-size: 14px;
+  font-family: "Arvo", sans-serif;
+  letter-spacing: 0.08em;
+  border-bottom: #777790 solid 2px;
+  padding-bottom: 10px;
+  margin-bottom: 8px; }
+#top-page .music_list .title {
+  font-size: 18px;
+  font-family: "NotoSans-bold", sans-serif;
+  line-height: 1.4em;
+  margin-bottom: 5px; }
+#top-page .music_list .artist {
+  font-size: 12px;
+  font-family: "NotoSans-bold", sans-serif; }
+#top-page .movie {
+  width: auto;
+  padding-left: 180px;
+  min-width: 1080px;
+  background: #ffffff url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #top-page .movie:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: -80px;
+    z-index: 1;
+    background: url("https://slowstart-usa.com/shared/images/top/bg_movie.png") no-repeat bottom center; }
+  #top-page .movie .l-inner {
+    width: 820px;
+    padding: 15px 0 180px 0;
+    border: none; }
+  #top-page .movie h3 {
+    line-height: 1em;
+    font-size: 24px;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    color: #777790;
+    letter-spacing: 0.16em;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 65px; }
+    #top-page .movie h3:after {
+      content: " ";
+      display: block;
+      background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+      width: 100%;
+      height: 7px;
+      position: absolute;
+      left: 0px;
+      bottom: -15px;
+      z-index: 0; }
+#top-page .movie_player {
+  margin-bottom: 30px;
+  width: 100%;
+  height: 460px; }
+  #top-page .movie_player iframe {
+    vertical-align: top; }
+#top-page .movie_thumb {
+  margin-bottom: 20px; }
+  #top-page .movie_thumb ul {
+    zoom: 1; }
+    #top-page .movie_thumb ul:after {
+      content: "";
+      clear: both;
+      display: block; }
+  #top-page .movie_thumb li {
+    width: 260px;
+    float: left;
+    margin: 0 20px 20px 0;
+    text-align: center; }
+    #top-page .movie_thumb li:nth-child(3n) {
+      margin-right: 0; }
+  #top-page .movie_thumb span {
+    display: block; }
+  #top-page .movie_thumb a {
+    text-decoration: none;
+    color: #777790;
+    display: block; }
+    #top-page .movie_thumb a .thumb:before, #top-page .movie_thumb a .thumb:after {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      -webkit-transition: opacity 0.3s;
+              transition: opacity 0.3s; }
+    #top-page .movie_thumb a:hover .thumb:before, #top-page .movie_thumb a:hover .thumb:after {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -webkit-transition: opacity 0.3s;
+              transition: opacity 0.3s; }
+  #top-page .movie_thumb .thumb {
+    width: 100%;
+    height: 146px;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px; }
+    #top-page .movie_thumb .thumb:before {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 169, 190, 0.6);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 0; }
+    #top-page .movie_thumb .thumb:after {
+      content: " ";
+      display: block;
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -35px 0 0 -35px;
+      border: 4px solid #ffffff;
+      border-radius: 70px;
+      background: url("https://slowstart-usa.com/shared/images/common/icon_play_w.png") no-repeat 24px center; }
+  #top-page .movie_thumb .title {
+    font-size: 14px;
+    font-family: "NotoSans-bold", sans-serif;
+    line-height: 1.6em; }
+  #top-page .movie_thumb li.current {
+    pointer-events: none; }
+    #top-page .movie_thumb li.current .thumb:before, #top-page .movie_thumb li.current .thumb:after {
+      display: none; }
+#top-page .movie_btn {
+  text-align: center; }
+  #top-page .movie_btn a {
+    text-decoration: none;
+    line-height: 1em;
+    color: #777790;
+    border: #777790 solid 2px;
+    padding: 12px 30px;
+    font-size: 12px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    font-family: "NotoSans-bold", sans-serif;
+    padding: 15px 60px;
+    color: #777790;
+    line-height: 1em;
+    background-color: transparent;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s; }
+    #top-page .movie_btn a:hover {
+      color: #ffffff;
+      background-color: #777790;
+      -webkit-transition: background-color 0.3s, color 0.3s;
+              transition: background-color 0.3s, color 0.3s; }
+#top-page .special {
+  width: auto;
+  padding-left: 180px;
+  min-width: 1080px;
+  background: #ffa9be url("https://slowstart-usa.com/shared/images/common/bg_pattern2.png") repeat top center; }
+  #top-page .special:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: -80px;
+    z-index: 1;
+    background: url("https://slowstart-usa.com/shared/images/top/bg_special.png") no-repeat bottom center; }
+  #top-page .special .l-inner {
+    width: 820px;
+    padding: 75px 0 145px 0;
+    border: none; }
+  #top-page .special h3 {
+    line-height: 1em;
+    font-size: 24px;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    letter-spacing: 0.16em;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 65px; }
+    #top-page .special h3:after {
+      content: " ";
+      display: block;
+      background: url("https://slowstart-usa.com/shared/images/common/line_wave_w.png") repeat-x left center;
+      width: 100%;
+      height: 7px;
+      position: absolute;
+      left: 0px;
+      bottom: -15px;
+      z-index: 0; }
+#top-page .special_list {
+  margin-bottom: 20px; }
+  #top-page .special_list ul {
+    zoom: 1; }
+    #top-page .special_list ul:after {
+      content: "";
+      clear: both;
+      display: block; }
+  #top-page .special_list li {
+    width: 260px;
+    float: left;
+    margin: 0 20px 20px 0;
+    text-align: center; }
+    #top-page .special_list li:nth-child(3n) {
+      margin-right: 0; }
+  #top-page .special_list span {
+    display: block; }
+  #top-page .special_list a {
+    text-decoration: none;
+    color: #777790;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    padding: 14px 14px 20px 14px;
+    min-height: 350px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    position: relative; }
+    #top-page .special_list a:after {
+      content: " ";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 35px 35px;
+      border-color: transparent transparent #ffd451 transparent;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      z-index: 1; }
+  #top-page .special_list .ph {
+    border: #dcd5d2 solid 1px;
+    margin-bottom: 20px; }
+  #top-page .special_list .title {
+    font-size: 14px;
+    font-family: "NotoSans-bold", sans-serif;
+    line-height: 1.6em; }
+#top-page .special_btn {
+  text-align: center; }
+  #top-page .special_btn a {
+    text-decoration: none;
+    line-height: 1em;
+    color: #ffffff;
+    border: #ffffff solid 2px;
+    padding: 12px 30px;
+    font-size: 12px;
+    background-color: none;
+    border-radius: 50px;
+    font-family: "NotoSans-bold", sans-serif;
+    padding: 15px 60px;
+    color: #ffffff;
+    background-color: transparent;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s; }
+    #top-page .special_btn a:hover {
+      color: #ffa9be;
+      background-color: #ffffff;
+      -webkit-transition: background-color 0.3s, color 0.3s;
+              transition: background-color 0.3s, color 0.3s; }
+#top-page .comics {
+  width: auto;
+  padding-left: 180px;
+  min-width: 1080px;
+  background: #f5f5f5 url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #top-page .comics:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    left: 0px;
+    top: -80px;
+    z-index: 1;
+    background: url("https://slowstart-usa.com/shared/images/top/bg_comics.png") no-repeat bottom center; }
+  #top-page .comics .l-inner {
+    width: 820px;
+    padding: 50px 0 70px 0;
+    border: none; }
+  #top-page .comics h3 {
+    line-height: 1em;
+    font-size: 24px;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    color: #777790;
+    letter-spacing: 0.16em;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 65px; }
+    #top-page .comics h3:after {
+      content: " ";
+      display: block;
+      background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+      width: 100%;
+      height: 7px;
+      position: absolute;
+      left: 0px;
+      bottom: -15px;
+      z-index: 0; }
+#top-page .comics_text {
+  position: absolute;
+  left: 290px;
+  top: 51px;
+  z-index: 0; }
+#top-page .comics_sd {
+  position: absolute;
+  left: 700px;
+  top: 63px;
+  z-index: 1; }
+#top-page .comics_wrap {
+  position: relative;
+  width: 100%; }
+  #top-page .comics_wrap .jacket {
+    position: absolute;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+    
+ .debug {
+  display: block !important; }
+
+
+#modal {
+  width: 100%;
+  height: 100%;
+  min-width: 1080px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: block;
+  display: none; }
+  #modal .modal_inner {
+    width: 100%;
+    height: 100%;
+    padding: 100px 0 100px 180px;
+    overflow: auto;
+    position: relative; }
+  #modal .modal_bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -ms-filter: "alpha(opacity=50)";
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5; }
+
+.charadetail_format {
+  display: none;
+  position: relative;
+  z-index: 1; }
+
+.charadetail {
+  width: 820px;
+  margin: 0 auto;
+  background: url("https://slowstart-usa.com/shared/images/top/chara_d_bg.png") repeat left top;
+  border-radius: 20px 0px 20px 20px / 20px 0px 20px 20px;
+  -webkit-border-top-left-radius: 20px 20px;
+  -webkit-border-top-right-radius: 0px 0px;
+  -webkit-border-bottom-right-radius: 20px 20px;
+  -webkit-border-bottom-left-radius: 20px 20px;
+  -moz-border-radius-topleft: 20px 20px;
+  -moz-border-radius-topright: 0px 0px;
+  -moz-border-radius-bottomright: 20px 20px;
+  -moz-border-radius-bottomleft: 20px 20px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  padding-bottom: 50px;
+  margin-bottom: 30px; }
+
+.charadetail_inner {
+  margin: 0 40px;
+  zoom: 1; }
+  .charadetail_inner:after {
+    content: "";
+    clear: both;
+    display: block; }
+  .charadetail_inner .block_l {
+    width: 315px;
+    float: left; }
+  .charadetail_inner .chara_face1 {
+    width: 100%;
+    height: 480px;
+    position: relative;
+    margin-bottom: 15px; }
+    .charadetail_inner .chara_face1 img {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 0; }
+  .charadetail_inner .chara_face_sub {
+    letter-spacing: -0.75em; }
+    .charadetail_inner .chara_face_sub li {
+      letter-spacing: normal;
+      display: inline-block;
+      margin-right: 10px; }
+      .charadetail_inner .chara_face_sub li:last-child {
+        margin-right: 0; }
+  .charadetail_inner .block_r {
+    width: 390px;
+    float: right;
+    padding-top: 50px;
+    position: relative; }
+  .charadetail_inner .chara_name {
+    margin-bottom: 25px;
+    line-height: 1em; }
+  .charadetail_inner .chara_text {
+    color: #777790;
+    font-size: 14px;
+    line-height: 1.8em;
+    background: url("https://slowstart-usa.com/shared/images/common/bar_dot1.png") repeat-x left bottom;
+    padding-bottom: 25px; }
+  .charadetail_inner .message {
+    width: 40px;
+    text-align: center;
+    padding: 30px 0 0 0;
+    position: absolute;
+    right: -80px;
+    top: 0px;
+    z-index: 0;
+    border-radius: 0px 20px 0px 0px / 0px 20px 0px 0px;
+    -webkit-border-top-left-radius: 0px 0px;
+    -webkit-border-top-right-radius: 20px 20px;
+    -webkit-border-bottom-right-radius: 0px 0px;
+    -webkit-border-bottom-left-radius: 0px 0px;
+    -moz-border-radius-topleft: 0px 0px;
+    -moz-border-radius-topright: 20px 20px;
+    -moz-border-radius-bottomright: 0px 0px;
+    -moz-border-radius-bottomleft: 0px 0px;
+    -webkit-filter: drop-shadow(10px 0px 10px rgba(0, 0, 0, 0.1));
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="10" /><feOffset dx="11" dy="1" result="offsetblur" /><feFlood flood-color="rgba(0,0,0,0.1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(10px 0px 10px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(10px 0px 10px rgba(0, 0, 0, 0.1)); }
+    .charadetail_inner .message p {
+      position: relative; }
+      .charadetail_inner .message p:after {
+        content: " ";
+        display: block;
+        width: 40px;
+        height: 89px;
+        position: absolute;
+        left: 0px;
+        bottom: -89px;
+        z-index: 0; }
+  .charadetail_inner .prof_wrap {
+    width: 100%;
+    zoom: 1; }
+    .charadetail_inner .prof_wrap:after {
+      content: "";
+      clear: both;
+      display: block; }
+  .charadetail_inner .prof_img {
+    float: right;
+    width: 220px; }
+  .charadetail_inner .prof_spec {
+    float: left;
+    width: 170px;
+    padding-top: 30px; }
+  .charadetail_inner .prof_spec_value {
+    border-radius: 20px;
+    padding: 20px 0;
+    position: relative;
+    margin-bottom: 35px; }
+    .charadetail_inner .prof_spec_value:after {
+      content: " ";
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      margin-top: -10px;
+      border-style: solid;
+      border-width: 10px 0 10px 10px; }
+    .charadetail_inner .prof_spec_value p {
+      margin: 0 0 0 30px;
+      font-size: 12px;
+      color: #777790;
+      margin-bottom: 3px; }
+      .charadetail_inner .prof_spec_value p:last-child {
+        margin-bottom: 0; }
+    .charadetail_inner .prof_spec_value strong {
+      font-family: "NotoSans-bold", sans-serif; }
+    .charadetail_inner .prof_spec_value span {
+      -webkit-transform: scale(6, 1);
+      -ms-transform: scale(6, 1);
+          transform: scale(6, 1);
+      display: inline-block;
+      margin: 0 12px; }
+  .charadetail_inner .prof_voice .prof_subhead,
+  .charadetail_inner .prof_movie .prof_subhead {
+    font-size: 16px;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px; }
+  .charadetail_inner .prof_voice {
+    margin-bottom: 25px; }
+  .charadetail_inner .prof_movie_btn a {
+    display: block;
+    position: relative; }
+    .charadetail_inner .prof_movie_btn a:after {
+      content: " ";
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background: url("https://slowstart-usa.com/shared/images/common/icon_arw_w2.png") no-repeat 9px center;
+      border: #ffffff solid 2px;
+      border-radius: 30px;
+      margin: -15px 0 0 -15px; }
+  .charadetail_inner .cv_wrap {
+    margin-top: 10px;
+    padding-top: 40px;
+    background: url("https://slowstart-usa.com/shared/images/common/bar_dot1.png") repeat-x center top;
+    display: table;
+    width: 100%; }
+  .charadetail_inner .cv_ph {
+    display: table-cell;
+    width: 20%;
+    pointer-events: none;
+    vertical-align: top; }
+    .charadetail_inner .cv_ph span {
+      display: block;
+      width: 120px;
+      height: 120px;
+      border-radius: 120px;
+      overflow: hidden; }
+  .charadetail_inner .cv_detail {
+    display: table-cell;
+    width: 80%;
+    vertical-align: top; }
+    .charadetail_inner .cv_detail .name {
+      font-size: 24px;
+      color: #777790;
+      line-height: 1em;
+      vertical-align: top;
+      position: relative;
+      padding-left: 45px;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px; }
+      .charadetail_inner .cv_detail .name:before {
+        content: "VA";
+        color: #FFFFFF;
+        font-size: 11px;
+        font-family: "Arvo", sans-serif;
+        letter-spacing: 0.08em;
+        display: inline;
+        line-height: 1em;
+        padding: 3px 8px 3px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.2em;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 0;
+        top: 50%;
+        margin-top: -8px; }
+    .charadetail_inner .cv_detail .commnet_title {
+      font-size: 12px;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      margin-bottom: 5px; }
+    .charadetail_inner .cv_detail .commnet_text {
+      color: #777790;
+      font-size: 12px; }
+
+.charadetail_nav {
+  width: 820px;
+  margin: 0 auto; }
+  .charadetail_nav ul {
+    display: table;
+    width: 100%; }
+  .charadetail_nav li {
+    display: table-cell; }
+    .charadetail_nav li a {
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+  .charadetail_nav .btn_close {
+    padding: 0 20px; }
+    .charadetail_nav .btn_close a {
+      border-radius: 80px; }
+.charadetail_sub {
+  width: 820px;
+  margin: 0 auto;
+  background: url("https://slowstart-usa.com/shared/images/top/chara_d_bg.png") repeat left top;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px; }
+
+.charadetail_inner_sub {
+  zoom: 1; }
+  .charadetail_inner_sub:after {
+    content: "";
+    clear: both;
+    display: block; }
+  .charadetail_inner_sub .block_l {
+    width: 390px;
+    float: left; }
+  .charadetail_inner_sub .block_r {
+    width: 390px;
+    float: left;
+    padding: 50px 0; }
+  .charadetail_inner_sub .chara_name {
+    margin-bottom: 25px;
+    line-height: 1em; }
+  .charadetail_inner_sub .chara_text {
+    color: #777790;
+    font-size: 14px;
+    line-height: 1.8em;
+    margin-bottom: 25px; }
+  .charadetail_inner_sub .cv_block {
+    background: url("https://slowstart-usa.com/shared/images/common/bar_dot1.png") repeat-x left top;
+    padding-top: 25px; }
+    .charadetail_inner_sub .cv_block .name {
+      font-size: 24px;
+      color: #777790;
+      line-height: 1em;
+      vertical-align: top;
+      position: relative;
+      padding-left: 45px;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px; }
+      .charadetail_inner_sub .cv_block .name:before {
+        content: "VA";
+        color: #FFFFFF;
+        font-size: 11px;
+        font-family: "Arvo", sans-serif;
+        letter-spacing: 0.08em;
+        display: inline;
+        line-height: 1em;
+        padding: 3px 8px 3px 10px;
+        border-radius: 20px;
+        letter-spacing: 0.2em;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 0;
+        top: 50%;
+        margin-top: -8px;
+        background-color: #e9d1a8; }
+
+.charadetail_nav_sub {
+  width: 820px;
+  margin: 0 auto; }
+  .charadetail_nav_sub ul {
+    display: block;
+    width: 100%;
+    text-align: center; }
+  .charadetail_nav_sub li {
+    display: inline-block; }
+    .charadetail_nav_sub li a {
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+  .charadetail_nav_sub .btn_close {
+    padding: 0 20px; }
+    .charadetail_nav_sub .btn_close a {
+      border-radius: 80px; }
+
+#hana .charadetail_inner .message {
+  background-color: #ffc71d; }
+  #hana .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_hana_cmm_bg_pc.png") no-repeat left top; }
+#hana .charadetail_inner .prof_spec_value {
+  background-color: #fff9e8; }
+  #hana .charadetail_inner .prof_spec_value:after {
+    border-color: transparent transparent transparent #fff9e8; }
+#hana .charadetail_inner .prof_voice .prof_subhead,
+#hana .charadetail_inner .prof_movie .prof_subhead {
+  color: #FFC71D; }
+#hana .charadetail_inner .cv_detail .name:before {
+  background-color: #ffc71d; }
+#hana .charadetail_inner .cv_detail .commnet_title {
+  color: #ffc71d; }
+
+#tamate .charadetail_inner .message {
+  background-color: #ff8b46; }
+  #tamate .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_tamate_cmm_bg_pc.png") no-repeat left top; }
+#tamate .charadetail_inner .prof_spec_value {
+  background-color: #fff0e8; }
+  #tamate .charadetail_inner .prof_spec_value:after {
+    border-color: transparent transparent transparent #fff0e8; }
+#tamate .charadetail_inner .prof_voice .prof_subhead,
+#tamate .charadetail_inner .prof_movie .prof_subhead {
+  color: #ff8b46; }
+#tamate .charadetail_inner .cv_detail .name:before {
+  background-color: #ff8b46; }
+#tamate .charadetail_inner .cv_detail .commnet_title {
+  color: #ff8b46; }
+
+#eiko .charadetail_inner .message {
+  background-color: #d4f00f; }
+  #eiko .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_eiko_cmm_bg_pc.png") no-repeat left top; }
+#eiko .charadetail_inner .prof_spec_value {
+  background-color: #faffcd; }
+  #eiko .charadetail_inner .prof_spec_value:after {
+    border-color: transparent transparent transparent #faffcd; }
+#eiko .charadetail_inner .prof_voice .prof_subhead,
+#eiko .charadetail_inner .prof_movie .prof_subhead {
+  color: #d4f00f; }
+#eiko .charadetail_inner .cv_detail .name:before {
+  background-color: #d4f00f; }
+#eiko .charadetail_inner .cv_detail .commnet_title {
+  color: #d4f00f; }
+
+#kamuri .charadetail_inner .message {
+  background-color: #b1c6ff; }
+  #kamuri .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_kamuri_cmm_bg_pc.png") no-repeat left top; }
+#kamuri .charadetail_inner .chara_face_sub li:first-child img {
+  margin-top: -12px; }
+#kamuri .charadetail_inner .prof_spec_value {
+  background-color: #f2f5ff; }
+  #kamuri .charadetail_inner .prof_spec_value:after {
+    border-color: transparent transparent transparent #f2f5ff; }
+#kamuri .charadetail_inner .prof_voice .prof_subhead,
+#kamuri .charadetail_inner .prof_movie .prof_subhead {
+  color: #b1c6ff; }
+#kamuri .charadetail_inner .cv_detail .name:before {
+  background-color: #b1c6ff; }
+#kamuri .charadetail_inner .cv_detail .commnet_title {
+  color: #b1c6ff; }
+
+#hiroe .charadetail_inner .message {
+  background-color: #92f1d5; }
+  #hiroe .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_hiroe_cmm_bg_pc.png") no-repeat left top; }
+#hiroe .charadetail_inner .prof_spec_value {
+  background-color: #e5fff7; }
+  #hiroe .charadetail_inner .prof_spec_value:after {
+    border-color: transparent transparent transparent #e5fff7; }
+#hiroe .charadetail_inner .prof_voice .prof_subhead,
+#hiroe .charadetail_inner .prof_movie .prof_subhead {
+  color: #92f1d5; }
+#hiroe .charadetail_inner .cv_detail .name:before {
+  background-color: #92f1d5; }
+#hiroe .charadetail_inner .cv_detail .commnet_title {
+  color: #92f1d5; }
+
+#shion .charadetail_inner .message {
+  background-color: #ff9fab; }
+  #shion .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_shion_cmm_bg_pc.png") no-repeat left top; }
+#shion .charadetail_inner .prof_spec_value {
+  background-color: #fff2f3; }
+  #shion .charadetail_inner .prof_spec_value:after {
+    border-color: transparent transparent transparent #fff2f3; }
+#shion .charadetail_inner .prof_voice .prof_subhead,
+#shion .charadetail_inner .prof_movie .prof_subhead {
+  color: #ff9fab; }
+#shion .charadetail_inner .cv_detail .name:before {
+  background-color: #ff9fab; }
+#shion .charadetail_inner .cv_detail .commnet_title {
+  color: #ff9fab; }
+
+#enami .charadetail_inner .message {
+  background-color: #dcb5ff; }
+  #enami .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_enami_cmm_bg_pc.png") no-repeat left top; }
+#enami .charadetail_inner .prof_spec_value {
+  background-color: #f8f2ff; }
+  #enami .charadetail_inner .prof_spec_value:after {
+    border-color: transparent transparent transparent #f8f2ff; }
+#enami .charadetail_inner .prof_voice .prof_subhead,
+#enami .charadetail_inner .prof_movie .prof_subhead {
+  color: #dcb5ff; }
+#enami .charadetail_inner .cv_detail .name:before {
+  background-color: #dcb5ff; }
+#enami .charadetail_inner .cv_detail .commnet_title {
+  color: #dcb5ff; }
+
+#news-index-page {
+  background: #f7f7f7 url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #news-index-page .l-header {
+    left: 0; }
+  #news-index-page .l-wrapper {
+    padding-bottom: 80px; }
+  #news-index-page .headline {
+    padding-left: 180px; }
+    #news-index-page .headline .l-inner {
+      width: 820px;
+      padding: 50px 0 67px 0; }
+    #news-index-page .headline h2 {
+      line-height: 1em;
+      font-size: 36px;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      color: #777790;
+      letter-spacing: 0.16em;
+      position: relative;
+      display: inline-block; }
+      #news-index-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+        width: 100%;
+        height: 7px;
+        position: absolute;
+        left: 0px;
+        bottom: -15px;
+        z-index: 0; }
+  #news-index-page .main {
+    padding-left: 180px;
+    margin-bottom: 40px; }
+    #news-index-page .main .l-inner {
+      width: 820px;
+      background-color: #ffffff;
+      border-radius: 20px; }
+    #news-index-page .main .content_inner {
+      margin: 0 20px;
+      padding: 30px 0 30px 0; }
+  #news-index-page .main_list {
+    display: block;
+    width: 100%; }
+    #news-index-page .main_list li {
+      background: url("https://slowstart-usa.com/shared/images/common/bar_dot1.png") repeat-x left bottom;
+      padding-bottom: 23px;
+      margin-bottom: 20px; }
+      #news-index-page .main_list li:last-child {
+        padding: 0;
+        margin: 0;
+        background: none; }
+    #news-index-page .main_list .date {
+      color: #ffa9be;
+      font-size: 12px;
+      margin: 0 30px 0 20px; }
+    #news-index-page .main_list .title {
+      margin: 0 30px 0 20px;
+      font-size: 18px; }
+      #news-index-page .main_list .title a {
+        background: url("https://slowstart-usa.com/shared/images/common/icon_arw_pr.png") no-repeat left 8px;
+        text-decoration: none;
+        padding-left: 15px;
+        color: #777790;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transition: opacity 0.3s;
+                transition: opacity 0.3s;
+        display: block; }
+        #news-index-page .main_list .title a:hover {
+          opacity: 0.6;
+          filter: alpha(opacity=60);
+          -webkit-transition: opacity 0.3s;
+                  transition: opacity 0.3s;
+          text-decoration: none; }
+  #news-index-page .paging {
+    padding-left: 180px; }
+    #news-index-page .paging .l-inner {
+      width: 820px;
+      text-align: center; }
+  #news-index-page .paging_nav {
+    display: table;
+    margin: 0 auto; }
+    #news-index-page .paging_nav li {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      padding: 0 5px; }
+    #news-index-page .paging_nav a {
+      text-decoration: none;
+      border: #777790 2px solid;
+      border-radius: 100px;
+      display: block;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      font-size: 16px;
+      color: #777790;
+      background-color: transparent;
+      -webkit-transition: background-color 0.3s, color 0.3s;
+              transition: background-color 0.3s, color 0.3s; }
+      #news-index-page .paging_nav a:hover {
+        color: #ffffff;
+        background-color: #777790;
+        -webkit-transition: background-color 0.3s, color 0.3s;
+                transition: background-color 0.3s, color 0.3s; }
+    #news-index-page .paging_nav .prev,
+    #news-index-page .paging_nav .next {
+      padding: 0 22px; }
+      #news-index-page .paging_nav .prev a,
+      #news-index-page .paging_nav .next a {
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        line-height: 30px; }
+      #news-index-page .paging_nav .prev span,
+      #news-index-page .paging_nav .next span {
+        display: none; }
+      #news-index-page .paging_nav .prev.last,
+      #news-index-page .paging_nav .next.last {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        -ms-filter: "alpha(opacity=50)";
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        pointer-events: none; }
+    #news-index-page .paging_nav .prev a {
+      background: transparent url("https://slowstart-usa.com/shared/images/common/icon_arw_gl.png") no-repeat center center;
+      -webkit-transition: background 0.3s;
+              transition: background 0.3s; }
+      #news-index-page .paging_nav .prev a:hover {
+        background: #777790 url("https://slowstart-usa.com/shared/images/common/icon_arw_wl.png") no-repeat center center;
+        -webkit-transition: background 0.3s;
+                transition: background 0.3s; }
+    #news-index-page .paging_nav .next a {
+      background: transparent url("https://slowstart-usa.com/shared/images/common/icon_arw_gr.png") no-repeat center center;
+      -webkit-transition: background 0.3s;
+              transition: background 0.3s; }
+      #news-index-page .paging_nav .next a:hover {
+        background: #777790 url("https://slowstart-usa.com/shared/images/common/icon_arw_wr.png") no-repeat center center;
+        -webkit-transition: background 0.3s;
+                transition: background 0.3s; }
+    #news-index-page .paging_nav .current span {
+      background-color: #777790;
+      color: #ffffff;
+      border-radius: 100px;
+      display: block;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      font-size: 16px;
+      width: 46px;
+      height: 46px;
+      line-height: 46px; }
+  #news-index-page .paging_nav a {
+    width: 46px;
+    height: 46px;
+    line-height: 46px; }
+
+#news-detail-page {
+  background: #f7f7f7 url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #news-detail-page .l-header {
+    left: 0; }
+  #news-detail-page .l-wrapper {
+    padding-bottom: 80px; }
+  #news-detail-page .headline {
+    padding-left: 180px; }
+    #news-detail-page .headline .l-inner {
+      width: 820px;
+      padding: 50px 0 67px 0; }
+    #news-detail-page .headline h2 {
+      line-height: 1em;
+      font-size: 36px;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      color: #777790;
+      letter-spacing: 0.16em;
+      position: relative;
+      display: inline-block; }
+      #news-detail-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+        width: 100%;
+        height: 7px;
+        position: absolute;
+        left: 0px;
+        bottom: -15px;
+        z-index: 0; }
+  #news-detail-page .main {
+    padding-left: 180px;
+    margin-bottom: 40px; }
+    #news-detail-page .main .l-inner {
+      width: 820px;
+      background-color: #ffffff;
+      border-radius: 20px; }
+    #news-detail-page .main .content_inner {
+      margin: 0 20px;
+      padding: 30px 0 30px 0; }
+  #news-detail-page .main_headline {
+    background: url("https://slowstart-usa.com/shared/images/common/bar_dot1.png") repeat-x center bottom;
+    padding-bottom: 25px;
+    margin-bottom: 25px; }
+    #news-detail-page .main_headline .date {
+      margin: 0 30px;
+      color: #FFA9BE;
+      font-size: 12px;
+      margin-bottom: 5px; }
+    #news-detail-page .main_headline h3 {
+      margin: 0 30px;
+      font-size: 22px;
+      color: #777790;
+      line-height: 1.7em; }
+  #news-detail-page .main_content {
+    margin: 0 30px;
+    color: #777790;
+    font-size: 14px;
+    line-height: 2em;
+    min-height: 600px; }
+    #news-detail-page .main_content strong {
+      font-size: 20px;
+      font-family: "NotoSans-bold", sans-serif; }
+    #news-detail-page .main_content a:link, #news-detail-page .main_content a:visited {
+      color: #ffa9be;
+      text-decoration: underline; }
+    #news-detail-page .main_content a:hover, #news-detail-page .main_content a:active {
+      color: #ffcbd8;
+      text-decoration: none; }
+  #news-detail-page .paging {
+    padding-left: 180px; }
+    #news-detail-page .paging .l-inner {
+      width: 820px;
+      text-align: center; }
+  #news-detail-page .paging_nav {
+    display: table;
+    margin: 0 auto; }
+    #news-detail-page .paging_nav li {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      padding: 0 5px; }
+    #news-detail-page .paging_nav a {
+      text-decoration: none;
+      border: #777790 2px solid;
+      border-radius: 100px;
+      display: block;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      font-size: 16px;
+      color: #777790;
+      background-color: transparent;
+      -webkit-transition: background-color 0.3s, color 0.3s;
+              transition: background-color 0.3s, color 0.3s; }
+      #news-detail-page .paging_nav a:hover {
+        color: #ffffff;
+        background-color: #777790;
+        -webkit-transition: background-color 0.3s, color 0.3s;
+                transition: background-color 0.3s, color 0.3s; }
+    #news-detail-page .paging_nav .prev,
+    #news-detail-page .paging_nav .next {
+      padding: 0 22px; }
+      #news-detail-page .paging_nav .prev a,
+      #news-detail-page .paging_nav .next a {
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        line-height: 30px; }
+      #news-detail-page .paging_nav .prev span,
+      #news-detail-page .paging_nav .next span {
+        display: none; }
+      #news-detail-page .paging_nav .prev.last,
+      #news-detail-page .paging_nav .next.last {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        -ms-filter: "alpha(opacity=50)";
+        -moz-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        pointer-events: none; }
+    #news-detail-page .paging_nav .prev a {
+      background: transparent url("https://slowstart-usa.com/shared/images/common/icon_arw_gl.png") no-repeat center center;
+      -webkit-transition: background 0.3s;
+              transition: background 0.3s; }
+      #news-detail-page .paging_nav .prev a:hover {
+        background: #777790 url("https://slowstart-usa.com/shared/images/common/icon_arw_wl.png") no-repeat center center;
+        -webkit-transition: background 0.3s;
+                transition: background 0.3s; }
+    #news-detail-page .paging_nav .next a {
+      background: transparent url("https://slowstart-usa.com/shared/images/common/icon_arw_gr.png") no-repeat center center;
+      -webkit-transition: background 0.3s;
+              transition: background 0.3s; }
+      #news-detail-page .paging_nav .next a:hover {
+        background: #777790 url("https://slowstart-usa.com/shared/images/common/icon_arw_wr.png") no-repeat center center;
+        -webkit-transition: background 0.3s;
+                transition: background 0.3s; }
+    #news-detail-page .paging_nav .current span {
+      background-color: #777790;
+      color: #ffffff;
+      border-radius: 100px;
+      display: block;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      font-size: 16px;
+      width: 46px;
+      height: 46px;
+      line-height: 46px; }
+  #news-detail-page .paging_nav a {
+    padding: 10px 40px 10px 40px; }
+
+#onair-page {
+  background: #f7f7f7 url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #onair-page .l-header {
+    left: 0; }
+  #onair-page .l-wrapper {
+    padding-bottom: 80px; }
+  #onair-page .headline {
+    padding-left: 180px; }
+    #onair-page .headline .l-inner {
+      width: 820px;
+      padding: 50px 0 67px 0; }
+    #onair-page .headline h2 {
+      line-height: 1em;
+      font-size: 36px;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      color: #777790;
+      letter-spacing: 0.16em;
+      position: relative;
+      display: inline-block; }
+      #onair-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+        width: 100%;
+        height: 7px;
+        position: absolute;
+        left: 0px;
+        bottom: -15px;
+        z-index: 0; }
+  #onair-page .main {
+    padding-left: 180px;
+    margin-bottom: 40px; }
+    #onair-page .main .l-inner {
+      width: 820px; }
+    #onair-page .main .content_inner {
+      margin-bottom: 55px; }
+    #onair-page .main h3 {
+      line-height: 1em;
+      margin-bottom: 20px;
+      color: #777790;
+      font-size: 16px; }
+  #onair-page .onair_graph {
+    margin-bottom: 15px; }
+    #onair-page .onair_graph.color_red ul:first-child {
+      background-color: #ff9fab; }
+    #onair-page .onair_graph.color_blue ul:first-child {
+      background-color: #b1c6ff; }
+    #onair-page .onair_graph ul {
+      display: table;
+      width: 100%;
+      background-color: #ffffff; }
+      #onair-page .onair_graph ul:first-child {
+        border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px;
+        -webkit-border-top-left-radius: 20px 20px;
+        -webkit-border-top-right-radius: 20px 20px;
+        -webkit-border-bottom-right-radius: 0px 0px;
+        -webkit-border-bottom-left-radius: 0px 0px;
+        -moz-border-radius-topleft: 20px 20px;
+        -moz-border-radius-topright: 20px 20px;
+        -moz-border-radius-bottomright: 0px 0px;
+        -moz-border-radius-bottomleft: 0px 0px; }
+        #onair-page .onair_graph ul:first-child li {
+          color: #ffffff;
+          font-family: "NotoSans-bold", sans-serif;
+          letter-spacing: 0.05em;
+          padding: 8px 0;
+          font-size: 16px;
+          border: none; }
+          #onair-page .onair_graph ul:first-child li:last-child {
+            text-align: center; }
+            #onair-page .onair_graph ul:first-child li:last-child span {
+              border: none; }
+        #onair-page .onair_graph ul:first-child span {
+          display: block;
+          border-right: #f8f3ef solid 1px; }
+      #onair-page .onair_graph ul:last-child {
+        border-radius: 0px 0px 20px 20px / 0px 0px 20px 20px;
+        -webkit-border-top-left-radius: 0px 0px;
+        -webkit-border-top-right-radius: 0px 0px;
+        -webkit-border-bottom-right-radius: 20px 20px;
+        -webkit-border-bottom-left-radius: 20px 20px;
+        -moz-border-radius-topleft: 0px 0px;
+        -moz-border-radius-topright: 0px 0px;
+        -moz-border-radius-bottomright: 20px 20px;
+        -moz-border-radius-bottomleft: 20px 20px; }
+        #onair-page .onair_graph ul:last-child li {
+          border-bottom: none; }
+    #onair-page .onair_graph li {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 1.6em;
+      border-right: #d9d9d9 solid 1px;
+      border-bottom: #d9d9d9 solid 1px;
+      color: #777790;
+      letter-spacing: 0.05em;
+      padding: 20px 10px; }
+    #onair-page .onair_graph .station {
+      width: 25%; }
+    #onair-page .onair_graph .start {
+      width: 23%; }
+    #onair-page .onair_graph .day {
+      width: 7%; }
+    #onair-page .onair_graph .time {
+      width: 15%; }
+    #onair-page .onair_graph .caution {
+      width: 30%;
+      text-align: left;
+      border-right: none; }
+  #onair-page .onair_caps {
+    color: #777790;
+    font-size: 11px;
+    text-align: right; }
+
+#music-page {
+  background: #f7f7f7 url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #music-page .l-header {
+    left: 0; }
+  #music-page .l-wrapper {
+    padding-bottom: 80px; }
+  #music-page .headline {
+    padding-left: 180px; }
+    #music-page .headline .l-inner {
+      width: 820px;
+      padding: 50px 0 67px 0; }
+    #music-page .headline h2 {
+      line-height: 1em;
+      font-size: 36px;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      color: #777790;
+      letter-spacing: 0.16em;
+      position: relative;
+      display: inline-block; }
+      #music-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+        width: 100%;
+        height: 7px;
+        position: absolute;
+        left: 0px;
+        bottom: -15px;
+        z-index: 0; }
+  #music-page .localnav {
+    padding-left: 180px;
+    margin-bottom: 50px; }
+    #music-page .localnav .l-inner {
+      width: 820px;
+      text-align: center; }
+  #music-page .paging_nav {
+    display: block;
+    zoom: 1; }
+    #music-page .paging_nav:after {
+      content: "";
+      clear: both;
+      display: block; }
+    #music-page .paging_nav li {
+      float: left;
+      width: 260px;
+      margin-right: 20px; }
+      #music-page .paging_nav li:last-child {
+        margin-right: 0; }
+      #music-page .paging_nav li.current a {
+        background-color: #777790;
+        color: #ffffff;
+        pointer-events: none; }
+    #music-page .paging_nav a {
+      padding: 12px 0;
+      text-decoration: none;
+      border: #777790 2px solid;
+      border-radius: 100px;
+      display: block;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      font-size: 18px;
+      color: #777790;
+      line-height: 1em;
+      background-color: transparent;
+      -webkit-transition: background-color 0.3s, color 0.3s;
+              transition: background-color 0.3s, color 0.3s; }
+      #music-page .paging_nav a:hover {
+        color: #ffffff;
+        background-color: #777790;
+        -webkit-transition: background-color 0.3s, color 0.3s;
+                transition: background-color 0.3s, color 0.3s; }
+  #music-page .opening,
+  #music-page .ending,
+  #music-page .charasong {
+    padding-left: 180px;
+    margin-bottom: 60px; }
+    #music-page .opening .l-inner,
+    #music-page .ending .l-inner,
+    #music-page .charasong .l-inner {
+      width: 820px;
+      background-color: #ffffff;
+      border-radius: 20px; }
+    #music-page .opening .content_inner,
+    #music-page .ending .content_inner,
+    #music-page .charasong .content_inner {
+      margin: 0 50px;
+      padding: 40px 0 60px 0; }
+      #music-page .opening .content_inner h3,
+      #music-page .ending .content_inner h3,
+      #music-page .charasong .content_inner h3 {
+        font-size: 24px;
+        color: #777790;
+        text-align: center;
+        font-family: "Arvo", sans-serif;
+        letter-spacing: 0.08em;
+        line-height: 1em;
+        border-bottom: #777790 solid 3px;
+        padding-bottom: 18px;
+        margin-bottom: 40px; }
+    #music-page .opening .block_wrap,
+    #music-page .ending .block_wrap,
+    #music-page .charasong .block_wrap {
+      zoom: 1;
+      margin-bottom: 30px; }
+      #music-page .opening .block_wrap:after,
+      #music-page .ending .block_wrap:after,
+      #music-page .charasong .block_wrap:after {
+        content: "";
+        clear: both;
+        display: block; }
+    #music-page .opening .block_l,
+    #music-page .ending .block_l,
+    #music-page .charasong .block_l {
+      width: 260px;
+      float: left; }
+      #music-page .opening .block_l .jacket,
+      #music-page .ending .block_l .jacket,
+      #music-page .charasong .block_l .jacket {
+        width: 260px;
+        height: 260px;
+        background-color: #ffffff;
+        display: table; }
+        #music-page .opening .block_l .jacket p,
+        #music-page .ending .block_l .jacket p,
+        #music-page .charasong .block_l .jacket p {
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+          font-family: "Arvo", sans-serif;
+          letter-spacing: 0.08em;
+          font-size: 15px;
+          color: #9A9A9A; }
+    #music-page .opening .block_r,
+    #music-page .ending .block_r,
+    #music-page .charasong .block_r {
+      width: 430px;
+      float: right;
+      color: #777790; }
+      #music-page .opening .block_r .box,
+      #music-page .ending .block_r .box,
+      #music-page .charasong .block_r .box {
+        border-bottom: #777790 solid 1px;
+        padding-bottom: 20px;
+        margin-bottom: 20px; }
+        #music-page .opening .block_r .box:last-child,
+        #music-page .ending .block_r .box:last-child,
+        #music-page .charasong .block_r .box:last-child {
+          border: none;
+          padding: 0;
+          margin: 0; }
+      #music-page .opening .block_r .song_title,
+      #music-page .ending .block_r .song_title,
+      #music-page .charasong .block_r .song_title {
+        font-size: 30px;
+        font-family: "NotoSans-bold", sans-serif;
+        text-indent: -0.5em;
+        margin-bottom: 15px;
+        line-height: 1.5em; }
+      #music-page .opening .block_r .artist,
+      #music-page .ending .block_r .artist,
+      #music-page .charasong .block_r .artist {
+        font-size: 20px;
+        line-height: 1.2em;
+        font-family: "NotoSans-bold", sans-serif;
+        margin-bottom: 10px; }
+        #music-page .opening .block_r .artist span,
+        #music-page .ending .block_r .artist span,
+        #music-page .charasong .block_r .artist span {
+          font-size: 14px; }
+      #music-page .opening .block_r .comment_text,
+      #music-page .ending .block_r .comment_text,
+      #music-page .charasong .block_r .comment_text {
+        font-size: 10px;
+        margin-bottom: 5px; }
+        #music-page .opening .block_r .comment_text strong,
+        #music-page .ending .block_r .comment_text strong,
+        #music-page .charasong .block_r .comment_text strong {
+          font-size: 12px;
+          font-family: "NotoSans-bold", sans-serif;
+          display: inline-block;
+          margin-right: 10px; }
+      #music-page .opening .block_r .comment_list,
+      #music-page .ending .block_r .comment_list,
+      #music-page .charasong .block_r .comment_list {
+        zoom: 1;
+        margin-bottom: 25px; }
+        #music-page .opening .block_r .comment_list:after,
+        #music-page .ending .block_r .comment_list:after,
+        #music-page .charasong .block_r .comment_list:after {
+          content: "";
+          clear: both;
+          display: block; }
+        #music-page .opening .block_r .comment_list li,
+        #music-page .ending .block_r .comment_list li,
+        #music-page .charasong .block_r .comment_list li {
+          width: 98px;
+          float: left;
+          margin-right: 10px;
+          border: #C7C7CF solid 1px;
+          box-sizing: content-box; }
+          #music-page .opening .block_r .comment_list li:last-child,
+          #music-page .ending .block_r .comment_list li:last-child,
+          #music-page .charasong .block_r .comment_list li:last-child {
+            margin-right: 0; }
+      #music-page .opening .block_r .date,
+      #music-page .ending .block_r .date,
+      #music-page .charasong .block_r .date {
+        font-size: 14px;
+        font-family: "NotoSans-bold", sans-serif;
+        letter-spacing: 0.05em; }
+      #music-page .opening .block_r .spec,
+      #music-page .ending .block_r .spec,
+      #music-page .charasong .block_r .spec {
+        font-size: 12px; }
+      #music-page .opening .block_r .detail_title,
+      #music-page .ending .block_r .detail_title,
+      #music-page .charasong .block_r .detail_title {
+        font-size: 10px; }
+        #music-page .opening .block_r .detail_title strong,
+        #music-page .ending .block_r .detail_title strong,
+        #music-page .charasong .block_r .detail_title strong {
+          font-size: 20px;
+          font-family: "NotoSans-bold", sans-serif;
+          display: inline-block;
+          margin-right: 10px; }
+      #music-page .opening .block_r .sub_headline,
+      #music-page .ending .block_r .sub_headline,
+      #music-page .charasong .block_r .sub_headline {
+        background-color: #777790;
+        display: inline-block;
+        color: #ffffff;
+        font-size: 13px;
+        line-height: 1em;
+        padding: 4px 30px 4px 30px;
+        font-family: "NotoSans-bold", sans-serif;
+        border-radius: 20px;
+        letter-spacing: 0.08em;
+        margin-top: 20px;
+        margin-bottom: 8px; }
+      #music-page .opening .block_r .tracklist,
+      #music-page .ending .block_r .tracklist,
+      #music-page .charasong .block_r .tracklist {
+        font-family: "NotoSans-bold", sans-serif;
+        letter-spacing: 0.05em;
+        font-size: 14px; }
+      #music-page .opening .block_r .text,
+      #music-page .ending .block_r .text,
+      #music-page .charasong .block_r .text {
+        font-size: 12px; }
+        #music-page .opening .block_r .text strong,
+        #music-page .ending .block_r .text strong,
+        #music-page .charasong .block_r .text strong {
+          font-size: 14px;
+          font-family: "NotoSans-bold", sans-serif;
+          letter-spacing: 0.05em;
+          display: inline-block;
+          margin-bottom: 2px; }
+        #music-page .opening .block_r .text .caps,
+        #music-page .ending .block_r .text .caps,
+        #music-page .charasong .block_r .text .caps {
+          font-size: 10px; }
+        #music-page .opening .block_r .text a,
+        #music-page .ending .block_r .text a,
+        #music-page .charasong .block_r .text a {
+          color: #ff9fab;
+          text-decoration: underline;
+          opacity: 1;
+          filter: alpha(opacity=100);
+          -webkit-transition: opacity 0.3s;
+                  transition: opacity 0.3s; }
+          #music-page .opening .block_r .text a:hover,
+          #music-page .ending .block_r .text a:hover,
+          #music-page .charasong .block_r .text a:hover {
+            opacity: 0.6;
+            filter: alpha(opacity=60);
+            -webkit-transition: opacity 0.3s;
+                    transition: opacity 0.3s;
+            text-decoration: none; }
+      #music-page .opening .block_r .tokuten_list,
+      #music-page .ending .block_r .tokuten_list,
+      #music-page .charasong .block_r .tokuten_list {
+        margin-top: 10px; }
+        #music-page .opening .block_r .tokuten_list li,
+        #music-page .ending .block_r .tokuten_list li,
+        #music-page .charasong .block_r .tokuten_list li {
+          border-left: #777790 solid 3px;
+          font-size: 14px;
+          font-family: "NotoSans-bold", sans-serif;
+          letter-spacing: 0.05em;
+          padding-left: 15px;
+          margin-bottom: 15px; }
+      #music-page .opening .block_r .type_list,
+      #music-page .ending .block_r .type_list,
+      #music-page .charasong .block_r .type_list {
+        margin-top: 10px; }
+        #music-page .opening .block_r .type_list li,
+        #music-page .ending .block_r .type_list li,
+        #music-page .charasong .block_r .type_list li {
+          border-left: #777790 solid 3px;
+          padding-left: 15px;
+          margin-bottom: 25px; }
+        #music-page .opening .block_r .type_list .type,
+        #music-page .ending .block_r .type_list .type,
+        #music-page .charasong .block_r .type_list .type {
+          font-size: 20px;
+          font-family: "NotoSans-bold", sans-serif;
+          letter-spacing: 0.05em; }
+          #music-page .opening .block_r .type_list .type span,
+          #music-page .ending .block_r .type_list .type span,
+          #music-page .charasong .block_r .type_list .type span {
+            font-size: 14px;
+            display: block; }
+      #music-page .opening .block_r .artist_ph,
+      #music-page .ending .block_r .artist_ph,
+      #music-page .charasong .block_r .artist_ph {
+        margin-top: 15px;
+        margin-bottom: 25px; }
+    #music-page .opening .btn_shop,
+    #music-page .ending .btn_shop,
+    #music-page .charasong .btn_shop {
+      text-align: center; }
+  #music-page .ending,
+  #music-page .charasong {
+    display: none; }
+
+#movie-page {
+  background: #f7f7f7 url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #movie-page .l-header {
+    left: 0; }
+  #movie-page .l-wrapper {
+    padding-bottom: 80px; }
+  #movie-page .headline {
+    padding-left: 180px; }
+    #movie-page .headline .l-inner {
+      width: 820px;
+      padding: 50px 0 67px 0; }
+    #movie-page .headline h2 {
+      line-height: 1em;
+      font-size: 36px;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      color: #777790;
+      letter-spacing: 0.16em;
+      position: relative;
+      display: inline-block; }
+      #movie-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+        width: 100%;
+        height: 7px;
+        position: absolute;
+        left: 0px;
+        bottom: -15px;
+        z-index: 0; }
+  #movie-page .main {
+    padding-left: 180px;
+    margin-bottom: 40px; }
+    #movie-page .main .l-inner {
+      width: 820px; }
+    #movie-page .main .content_inner {
+      margin-bottom: 55px; }
+    #movie-page .main h3 {
+      line-height: 1em;
+      margin-bottom: 20px;
+      color: #777790;
+      font-size: 16px; }
+  #movie-page .movie_player {
+    margin-bottom: 50px;
+    width: 100%;
+    height: 460px; }
+  #movie-page .movie_thumb {
+    margin-bottom: 20px; }
+    #movie-page .movie_thumb ul {
+      zoom: 1; }
+      #movie-page .movie_thumb ul:after {
+        content: "";
+        clear: both;
+        display: block; }
+    #movie-page .movie_thumb li {
+      width: 260px;
+      float: left;
+      margin: 0 20px 30px 0;
+      text-align: center; }
+      #movie-page .movie_thumb li:nth-child(3n) {
+        margin-right: 0; }
+    #movie-page .movie_thumb span {
+      display: block; }
+    #movie-page .movie_thumb a {
+      text-decoration: none;
+      color: #777790;
+      display: block; }
+      #movie-page .movie_thumb a .thumb:before, #movie-page .movie_thumb a .thumb:after {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        -webkit-transition: opacity 0.3s;
+                transition: opacity 0.3s; }
+      #movie-page .movie_thumb a:hover .thumb:before, #movie-page .movie_thumb a:hover .thumb:after {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-transition: opacity 0.3s;
+                transition: opacity 0.3s; }
+    #movie-page .movie_thumb .thumb {
+      width: 100%;
+      height: 146px;
+      background-size: cover;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 10px; }
+      #movie-page .movie_thumb .thumb:before {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 169, 190, 0.6);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 0; }
+      #movie-page .movie_thumb .thumb:after {
+        content: " ";
+        display: block;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -35px 0 0 -35px;
+        border: 4px solid #ffffff;
+        border-radius: 70px;
+        background: url("https://slowstart-usa.com/shared/images/common/icon_play_w.png") no-repeat 24px center; }
+    #movie-page .movie_thumb .title {
+      font-size: 14px;
+      font-family: "NotoSans-bold", sans-serif;
+      line-height: 1.6em; }
+    #movie-page .movie_thumb li.current .thumb:before, #movie-page .movie_thumb li.current .thumb:after {
+      display: none; }
+    #movie-page .movie_thumb li.current a {
+      pointer-events: none; }
+
+#special-index-page {
+  background: #f7f7f7 url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #special-index-page .l-header {
+    left: 0; }
+  #special-index-page .l-wrapper {
+    padding-bottom: 80px; }
+  #special-index-page .headline {
+    padding-left: 180px; }
+    #special-index-page .headline .l-inner {
+      width: 820px;
+      padding: 50px 0 67px 0; }
+    #special-index-page .headline h2 {
+      line-height: 1em;
+      font-size: 36px;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      color: #777790;
+      letter-spacing: 0.16em;
+      position: relative;
+      display: inline-block; }
+      #special-index-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+        width: 100%;
+        height: 7px;
+        position: absolute;
+        left: 0px;
+        bottom: -15px;
+        z-index: 0; }
+  #special-index-page .main {
+    padding-left: 180px;
+    margin-bottom: 40px; }
+    #special-index-page .main .l-inner {
+      width: 820px; }
+    #special-index-page .main .special_list {
+      margin-bottom: 20px; }
+      #special-index-page .main .special_list ul {
+        zoom: 1; }
+        #special-index-page .main .special_list ul:after {
+          content: "";
+          clear: both;
+          display: block; }
+      #special-index-page .main .special_list li {
+        width: 260px;
+        float: left;
+        margin: 0 20px 20px 0;
+        text-align: center; }
+        #special-index-page .main .special_list li:nth-child(3n) {
+          margin-right: 0; }
+      #special-index-page .main .special_list span {
+        display: block; }
+      #special-index-page .main .special_list a {
+        text-decoration: none;
+        color: #777790;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        display: block;
+        padding: 14px 14px 20px 14px;
+        min-height: 360px;
+        position: relative; }
+        #special-index-page .main .special_list a:after {
+          content: " ";
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0 35px 35px;
+          border-color: transparent transparent #ffd451 transparent;
+          position: absolute;
+          right: 0px;
+          bottom: 0px;
+          z-index: 1; }
+      #special-index-page .main .special_list .ph {
+        border: #dcd5d2 solid 1px;
+        margin-bottom: 20px; }
+      #special-index-page .main .special_list .title {
+        font-size: 14px;
+        font-family: "NotoSans-bold", sans-serif;
+        line-height: 1.6em; }
+
+#special-page {
+  background: #f7f7f7 url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+  #special-page .l-header {
+    left: 0; }
+  #special-page .l-wrapper {
+    padding-bottom: 80px; }
+  #special-page .headline {
+    padding-left: 180px; }
+    #special-page .headline .l-inner {
+      width: 820px;
+      padding: 50px 0 67px 0; }
+    #special-page .headline h2 {
+      line-height: 1em;
+      font-size: 36px;
+      font-family: "Arvo", sans-serif;
+      letter-spacing: 0.08em;
+      color: #777790;
+      letter-spacing: 0.16em;
+      position: relative;
+      display: inline-block; }
+      #special-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g.png") repeat-x left center;
+        width: 100%;
+        height: 7px;
+        position: absolute;
+        left: 0px;
+        bottom: -15px;
+        z-index: 0; }
+  #special-page .main {
+    padding-left: 180px;
+    margin-bottom: 40px; }
+    #special-page .main .l-inner {
+      width: 820px;
+      background-color: #ffffff;
+      border-radius: 20px; }
+    #special-page .main .content_inner {
+      margin: 0 20px;
+      padding: 30px 0 60px 0; }
+  #special-page .main_headline {
+    background: url("https://slowstart-usa.com/shared/images/common/bar_dot1.png") repeat-x center bottom;
+    padding-bottom: 25px;
+    margin-bottom: 25px; }
+    #special-page .main_headline h3 {
+      margin: 0 30px;
+      font-size: 22px;
+      color: #777790;
+      line-height: 1.7em; }
+  #special-page .main_content {
+    margin: 0 30px;
+    color: #777790;
+    font-size: 14px;
+    line-height: 1.8em;
+    min-height: 600px; }
+    #special-page .main_content a:link, #special-page .main_content a:visited {
+      color: #ffa9be;
+      text-decoration: underline; }
+    #special-page .main_content a:hover, #special-page .main_content a:active {
+      color: #ffcbd8;
+      text-decoration: none; }
+  #special-page .paging {
+    padding-left: 180px; }
+    #special-page .paging .l-inner {
+      width: 820px;
+      text-align: center; }
+  #special-page .paging_top a {
+    padding: 10px 40px 10px 40px; }
+
+.pc-only {
+  display: block; }
+
+.pc-only-inline {
+  display: inline; }
+
+.sp-only, .sp-only-inline {
+  display: none; }
+
+.mobile {
+  -webkit-text-size-adjust: 100%; }
+  .mobile .pc-only, .mobile .pc-only-inline {
+    display: none; }
+  .mobile .sp-only {
+    display: block; }
+  .mobile .sp-only-inline {
+    display: inline-block; }
+  .mobile .l-wrapper {
+    margin: 0 auto;
+    width: 750px;
+    min-width: 750px;
+    height: auto; }
+  .mobile .l-header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+    background-color: #ffffff;
+    top: -1100px; }
+    .mobile .l-header .l-inner {
+      width: 100%;
+      padding-top: 0 !important;
+      padding-bottom: 80px; }
+      .mobile .l-header .l-inner:after {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 77px;
+        background: url("https://slowstart-usa.com/shared/images/common/hd_sp_bg.png") no-repeat center center;
+        position: absolute;
+        left: 0px;
+        bottom: -77px;
+        z-index: 0; }
+  .mobile .hd_nav {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 0px;
+    overflow: hidden;
+    margin-bottom: 50px; }
+    .mobile .hd_nav ul, .mobile .hd_nav li {
+      line-height: 1em; }
+    .mobile .hd_nav a {
+      display: table-cell;
+      padding: 0;
+      position: relative;
+      vertical-align: middle;
+      padding-bottom: 10px; }
+      .mobile .hd_nav a span {
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 0;
+        top: auto; }
+        .mobile .hd_nav a span:before {
+          display: none; }
+    .mobile .hd_nav ul {
+      zoom: 1;
+      width: 100%;
+      display: block; }
+      .mobile .hd_nav ul:after {
+        content: "";
+        clear: both;
+        display: block; }
+    .mobile .hd_nav li {
+      position: relative;
+      width: 50%;
+      height: 140px;
+      float: left;
+      text-align: center;
+      display: table;
+      border-right: #f0eae6 solid 2px; }
+      .mobile .hd_nav li:nth-child(2n) {
+        border-right: none; }
+      .mobile .hd_nav li:after {
+        display: none; }
+      .mobile .hd_nav li:last-child:after {
+        background: none; }
+      .mobile .hd_nav li:last-child a {
+        padding-bottom: 0; }
+    .mobile .hd_nav .nav_news img {
+      height: 60px;
+      width: auto; }
+    .mobile .hd_nav .nav_story img {
+      height: 66px;
+      width: auto; }
+    .mobile .hd_nav .nav_character img {
+      height: 63px;
+      width: auto; }
+    .mobile .hd_nav .nav_staff img {
+      height: 63px;
+      width: auto; }
+    .mobile .hd_nav .nav_onair img {
+      height: 63px;
+      width: auto; }
+    .mobile .hd_nav .nav_music img {
+      height: 63px;
+      width: auto; }
+    .mobile .hd_nav .nav_movie img {
+      height: 62px;
+      width: auto; }
+    .mobile .hd_nav .nav_special img {
+      height: 66px;
+      width: auto; }
+    .mobile .hd_nav .nav_comics img {
+      height: 62px;
+      width: auto; }
+  .mobile .hd_share {
+    width: 490px;
+    margin: 0 auto; }
+    .mobile .hd_share .share_title {
+      font-size: 24px;
+      -webkit-transform: scale(1);
+      display: table-cell;
+      padding-left: 0; }
+    .mobile .hd_share ul {
+      width: 360px;
+      display: table-cell;
+      zoom: 1;
+      vertical-align: middle; }
+      .mobile .hd_share ul:after {
+        content: "";
+        clear: both;
+        display: block; }
+    .mobile .hd_share li {
+      width: 90px;
+      height: 90px;
+      display: table;
+      margin: 0 15px; }
+      .mobile .hd_share li a {
+        border-radius: 100px;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3); }
+    .mobile .hd_share .btn_tw img {
+      width: 46px;
+      height: auto; }
+    .mobile .hd_share .btn_fb img {
+      width: 42px;
+      height: auto; }
+    .mobile .hd_share .btn_line img {
+      width: 46px;
+      height: auto; }
+  .mobile .hd_sp_close {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    left: 50%;
+    bottom: -75px;
+    z-index: 2;
+    margin-left: -65px;
+    display: table; }
+    .mobile .hd_sp_close a {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle; }
+  .mobile .sp_hd_cover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 99;
+    display: none; }
+  .mobile .sp_ham {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 50;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 100px; }
+  .mobile .l-footer {
+    min-width: 750px; }
+    .mobile .l-footer .l-inner {
+      width: 750px;
+      padding: 50px 0 20px 0; }
+  .mobile .ft_nav {
+    margin-bottom: 50px; }
+    .mobile .ft_nav li {
+      font-size: 20px;
+      margin: 0 25px; }
+  .mobile .ft_copyright img {
+    width: 341px;
+    height: auto; }
+  .mobile .m-button {
+    width: 100%;
+    line-height: 1.5em;
+    color: #777790;
+    border: #777790 solid 4px;
+    padding: 30px 40px 33px 40px;
+    font-size: 28px;
+    text-decoration: none !important;
+    border-radius: 200px;
+    display: inline-block; }
+  .mobile#top-page .sp_hd_logo {
+    display: none; }
+  .mobile#top-page .main {
+    min-width: 750px; }
+    .mobile#top-page .main:after {
+      height: 60px;
+      background: url("https://slowstart-usa.com/shared/images/top/bg_visual3.png") no-repeat center top;
+      background-size: 2500px 100%; }
+  .mobile#top-page .main_logo {
+    margin: 78% auto 0 auto;
+    padding-left: 0; }
+    .mobile#top-page .main_logo img {
+      width: 60%;
+      height: auto; }
+  .mobile#top-page .main_copy {
+    position: absolute;
+    left: 35px;
+    top: 36px;
+    z-index: 2;
+    display: block;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+        transform: scale(0.7);
+    -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0; }
+  .mobile#top-page .main_date {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 10px;
+    bottom: -70px;
+    z-index: 2; }
+    .mobile#top-page .main_date .date img {
+      width: 130px;
+      height: auto; }
+    .mobile#top-page .main_date .bg {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 0;
+      width: 200px;
+      height: 200px; }
+      .mobile#top-page .main_date .bg img {
+        width: 100%;
+        height: auto; }
+  .mobile#top-page .information {
+    width: 100%;
+    padding-left: 0;
+    min-width: 750px; }
+    .mobile#top-page .information .l-inner {
+      width: 690px;
+      padding: 90px 0 100px 0;
+      border: none; }
+  .mobile#top-page .information_banner {
+    margin-bottom: 60px; }
+    .mobile#top-page .information_banner li {
+      margin: 0 20px 20px 0;
+      width: 335px;
+      height: 137px; }
+      .mobile#top-page .information_banner li:last-child {
+        margin-right: 0px; }
+      .mobile#top-page .information_banner li:nth-child(3n) {
+        margin-right: 0; }
+    .mobile#top-page .information_banner img {
+      width: 100%;
+      height: auto; }
+  .mobile#top-page .information_news h3 {
+    font-size: 60px;
+    margin-bottom: 40px; }
+  .mobile#top-page .information_news .news_wrap {
+    width: 100%;
+    float: none;
+    margin-bottom: 80px; }
+    .mobile#top-page .information_news .news_wrap ul {
+      margin-bottom: 50px; }
+    .mobile#top-page .information_news .news_wrap li {
+      margin-bottom: 20px; }
+      .mobile#top-page .information_news .news_wrap li a {
+        margin-left: 140px;
+        border-radius: 20px;
+        padding: 25px 0; }
+        .mobile#top-page .information_news .news_wrap li a:before {
+          left: -20px;
+          margin-top: -10px;
+          border: 10px solid transparent; }
+      .mobile#top-page .information_news .news_wrap li span {
+        margin: 0 35px; }
+      .mobile#top-page .information_news .news_wrap li .text {
+        font-size: 22px; }
+      .mobile#top-page .information_news .news_wrap li .date {
+        font-size: 16px;
+        margin-bottom: 10px; }
+      .mobile#top-page .information_news .news_wrap li:nth-child(1):after {
+        background: url("https://slowstart-usa.com/shared/images/top/news_icon1_sp.png") no-repeat center center;
+        width: 103px;
+        height: 120px;
+        left: 0;
+        margin-top: -60px; }
+      .mobile#top-page .information_news .news_wrap li:nth-child(2):after {
+        background: url("https://slowstart-usa.com/shared/images/top/news_icon2_sp.png") no-repeat center center;
+        width: 147px;
+        height: 122px;
+        left: -13px;
+        margin-top: -61px; }
+      .mobile#top-page .information_news .news_wrap li:nth-child(3):after {
+        background: url("https://slowstart-usa.com/shared/images/top/news_icon3_sp.png") no-repeat center center;
+        width: 86px;
+        height: 109px;
+        left: 17px;
+        margin-top: -60px; }
+      .mobile#top-page .information_news .news_wrap li:nth-child(4):after {
+        background: url("https://slowstart-usa.com/shared/images/top/news_icon4_sp.png") no-repeat center center;
+        width: 99px;
+        height: 125px;
+        left: 12px;
+        margin-top: -70px; }
+    .mobile#top-page .information_news .news_wrap .news_btn {
+      margin: 0 45px; }
+      .mobile#top-page .information_news .news_wrap .news_btn a {
+        width: 100%;
+        display: block;
+        border: #777790 solid 4px;
+        padding: 40px 0;
+        font-size: 28px;
+        border-radius: 150px;
+        text-align: center; }
+  .mobile#top-page .information_news .tweet_wrap {
+    width: 100%;
+    float: none;
+    border: #e4e4e9 solid 2px;
+    border-radius: 20px; }
+    .mobile#top-page .information_news .tweet_wrap iframe {
+      width: 100%;
+      height: 690px; }
+  .mobile#top-page .story {
+    width: 100%;
+    padding-left: 0;
+    height: auto;
+    min-width: 750px; }
+    .mobile#top-page .story .l-inner {
+      width: 690px;
+      padding-bottom: 145px; }
+    .mobile#top-page .story .movie_wrap:after {
+      background-color: rgba(119, 119, 144, 0.5); }
+  .mobile#top-page .story_intro {
+    text-align: center; }
+    .mobile#top-page .story_intro h3 {
+      font-size: 60px;
+      letter-spacing: 0.2em;
+      margin: 0 auto 90px auto; }
+      .mobile#top-page .story_intro h3:after {
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_w_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+    .mobile#top-page .story_intro .text {
+      margin: 0 0 75px 0;
+      text-align: center; }
+      .mobile#top-page .story_intro .text img {
+        width: 626px;
+        height: auto; }
+    .mobile#top-page .story_intro .btn_pv {
+      position: relative;
+      left: auto;
+      top: auto;
+      margin: 0 45px; }
+      .mobile#top-page .story_intro .btn_pv a {
+        display: block;
+        font-size: 28px;
+        background: url("https://slowstart-usa.com/shared/images/common/icon_arw_w1_sp.png") no-repeat 130px center;
+        border: 4px solid #ffffff;
+        padding: 30px 0;
+        border-radius: 150px; }
+  .mobile#top-page .story_block {
+    width: 570px;
+    height: auto;
+    min-height: 1150px;
+    margin: 135px auto 0 auto; }
+  .mobile#top-page .story_format h4 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 80px;
+    line-height: 1.4em; }
+    .mobile#top-page .story_format h4 span {
+      display: block;
+      position: absolute;
+      left: -60px;
+      top: -24px;
+      z-index: 0; }
+  .mobile#top-page .story_format .detail_img {
+    width: 100%;
+    float: none;
+    margin-bottom: 30px; }
+  .mobile#top-page .story_format .img_large {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 15px; }
+    .mobile#top-page .story_format .img_large img {
+      width: 100%;
+      height: auto; }
+  .mobile#top-page .story_format .img_list li {
+    width: 180px;
+    height: 101px;
+    margin-right: 15px; }
+    .mobile#top-page .story_format .img_list li:last-child {
+      margin-right: 0; }
+    .mobile#top-page .story_format .img_list li img {
+      width: 100%;
+      height: auto; }
+  .mobile#top-page .story_format .detail_text {
+    width: 100%;
+    float: none;
+    font-size: 24px; }
+    .mobile#top-page .story_format .detail_text .text {
+      margin-bottom: 30px; }
+  .mobile#top-page .story_format .btn_movie a {
+    font-size: 28px;
+    background: url("https://slowstart-usa.com/shared/images/common/icon_arw_w1_sp.png") no-repeat 100px center;
+    border: 4px solid #ffffff;
+    padding: 30px 0;
+    border-radius: 150px; }
+  .mobile#top-page .story_nav {
+    border-top: #ffffff solid 2px;
+    padding-top: 40px;
+    width: 570px;
+    margin-top: 60px; }
+    .mobile#top-page .story_nav li {
+      width: 134px;
+      margin-right: 11px;
+      margin-bottom: 20px; }
+      .mobile#top-page .story_nav li:nth-child(1) {
+        margin-right: 200px; }
+      .mobile#top-page .story_nav li:nth-child(7n) {
+        margin-right: 11px; }
+      .mobile#top-page .story_nav li:nth-child(5), .mobile#top-page .story_nav li:nth-child(9), .mobile#top-page .story_nav li:nth-child(13), .mobile#top-page .story_nav li:nth-child(17), .mobile#top-page .story_nav li:nth-child(21), .mobile#top-page .story_nav li:nth-child(25) {
+        margin-right: 0; }
+      .mobile#top-page .story_nav li a {
+        border: 4px solid #ffffff;
+        border-radius: 30px;
+        text-align: center;
+        line-height: 1em;
+        font-size: 16px;
+        height: 60px;
+        padding: 18px 0 0 0; }
+        .mobile#top-page .story_nav li a:hover {
+          color: #777790;
+          background-color: #ffffff;
+          -webkit-transition: background-color 0.3s, color 0.3s;
+                  transition: background-color 0.3s, color 0.3s; }
+  .mobile#top-page .story_nav li span {
+        display: block;
+        line-height: 20px;
+        margin-top: -3px;
+        font-size: 36px; }
+      .mobile#top-page .story_nav li i {
+        line-height: 14px;
+        display: inline;
+        vertical-align: middle;
+        font-size: 14px; }
+    .mobile#top-page .story_nav .btn_00 {
+      width: 279px; }
+      .mobile#top-page .story_nav .btn_00 a {
+        font-size: 28px;
+        padding: 10px 0 0 0; }
+    .mobile#top-page .story_nav .btn_07 {
+      margin-left: 0; }
+  .mobile#top-page .story_paging li {
+    border-radius: 50px; }
+    .mobile#top-page .story_paging li img {
+      width: 50px;
+      height: auto; }
+  .mobile#top-page .story_paging .prev {
+    position: absolute;
+    left: -15px;
+    top: 560px;
+    z-index: 1; }
+  .mobile#top-page .story_paging .next {
+    position: absolute;
+    right: -15px;
+    top: 560px;
+    z-index: 1; }
+  .mobile#top-page .character {
+    width: 100%;
+    padding-left: 0;
+    min-width: 750px;
+     }
+    .mobile#top-page .character .l-inner {
+      width: 690px;
+      text-align: center;
+      padding: 65px 0 0 0; }
+    .mobile#top-page .character h3 {
+      font-size: 60px;
+      letter-spacing: 0.2em;
+      position: relative;
+      left: auto;
+      top: auto; }
+      .mobile#top-page .character h3:after {
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_w_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#top-page .character_main .hana {
+    position: absolute;
+    left: 210px;
+    top: 317px;
+    z-index: 2; }
+    .mobile#top-page .character_main .hana .ph img {
+      width: 438px;
+      height: auto; }
+    .mobile#top-page .character_main .hana .name {
+      position: absolute;
+      left: 295px;
+      top: 480px;
+      z-index: 0; }
+      .mobile#top-page .character_main .hana .name img {
+        width: auto;
+        height: 60px; }
+  .mobile#top-page .character_main .tamate {
+    position: absolute;
+    left: 7px;
+    top: 305px;
+    z-index: 1; }
+    .mobile#top-page .character_main .tamate .ph img {
+      width: 608px;
+      height: auto; }
+    .mobile#top-page .character_main .tamate .name {
+      position: absolute;
+      left: -30px;
+      top: 488px;
+      z-index: 0; }
+      .mobile#top-page .character_main .tamate .name img {
+        width: auto;
+        height: 60px; }
+  .mobile#top-page .character_main .kamuri {
+    position: absolute;
+    left: 69px;
+    top: 44px;
+    z-index: 0; }
+    .mobile#top-page .character_main .kamuri .ph img {
+      height: 441px;
+      width: auto; }
+    .mobile#top-page .character_main .kamuri .name {
+      position: absolute;
+      left: -87px;
+      top: 40px;
+      z-index: 0; }
+.mobile#top-page .character_main .kamuri .name img {
+        width: auto;
+        height: 60px; }
+  .mobile#top-page .character_main .eiko {
+    position: absolute;
+    left: 237px;
+    top: 100px;
+    z-index: 0; }
+    .mobile#top-page .character_main .eiko .ph img {
+      height: 506px;
+      width: auto; }
+    .mobile#top-page .character_main .eiko .name {
+      position: absolute;
+      left: 300px;
+      top: 56px;
+      z-index: 0; }
+      .mobile#top-page .character_main .eiko .name img {
+        width: auto;
+        height: 60px; }
+        
+  .mobile#top-page .character_sub {
+    position: absolute;
+    left: 0px;
+    top: 1095px;
+    z-index: 0; }
+    .mobile#top-page .character_sub ul {
+      width: 612px; }
+    .mobile#top-page .character_sub li {
+      width: 190px;
+      margin: 0 7px; }
+      .mobile#top-page .character_sub li img {
+        width: 100%;
+        height: auto; }
+    .mobile#top-page .character_sub .ph {
+      margin-bottom: 15px; }
+    .mobile#top-page .character_sub .name img {
+      height: 42px;
+      width: auto; }
+  .mobile#top-page .character_more {
+    padding-top: 1350px;
+    padding-bottom: 150px; }
+    .mobile#top-page .character_more .btn_more {
+      width: 590px; }
+      .mobile#top-page .character_more .btn_more a {
+        width: 100%;
+        display: block;
+        border: #ffffff solid 4px;
+        padding: 40px 0;
+        font-size: 28px;
+        border-radius: 150px;
+        text-align: center; }
+        .mobile#top-page .character_more .btn_more a:hover {
+          color: #ffffff; }
+      .mobile#top-page .character_more .btn_more.new {
+        padding-top: 150px; }
+        .mobile#top-page .character_more .btn_more.new:before {
+          background: url("https://slowstart-usa.com/shared/images/top/chara_btn_sub_new_sp.png") no-repeat left top;
+          background-size: 100% 100%;
+          width: 346px;
+          height: 150px;
+          position: absolute;
+          left: 191px;
+          top: 0px;
+          z-index: 1; }
+    .mobile#top-page .character_more .plus a {
+      background: url("https://slowstart-usa.com/shared/images/common/icon_plus_sp.png") no-repeat 60px center; }
+      .mobile#top-page .character_more .plus a:hover {
+        background: url("https://slowstart-usa.com/shared/images/common/icon_plus_sp.png") no-repeat 60px center; }
+    .mobile#top-page .character_more .minus a {
+      background: url("https://slowstart-usa.com/shared/images/common/icon_minus_sp.png") no-repeat 60px center; }
+      .mobile#top-page .character_more .minus a:hover {
+        background: url("https://slowstart-usa.com/shared/images/common/icon_minus_sp.png") no-repeat 60px center; }
+  .mobile#top-page .character_more_list {
+    margin: 0 auto 30px auto;
+    display: none; }
+    .mobile#top-page .character_more_list li {
+      margin: 0 10px 30px 10px; }
+    .mobile#top-page .character_more_list .ph {
+      margin-bottom: 15px; }
+    .mobile#top-page .character_more_list .name_jp {
+      font-size: 18px;
+      margin-bottom: 10px; }
+    .mobile#top-page .character_more_list .name_en {
+      font-size: 12px;
+      -ms-transform: scale(1);
+          transform: scale(1);
+      -webkit-transform: scale(1);
+      letter-spacing: 0.1em; }
+      
+  .mobile#top-page .sc {
+    width: 100%;
+    padding-left: 0;
+    min-width: 750px;
+    background: #ffffff url("https://slowstart-usa.com/shared/images/common/bg_pattern1.png") repeat top center; }
+    .mobile#top-page .sc .l-inner {
+      width: 690px;
+      padding: 95px 0 150px 0;
+      border: none;
+      text-align: center; }
+    .mobile#top-page .sc h3 {
+      font-size: 60px;
+      letter-spacing: 0.2em;
+      margin-bottom: 85px; }
+      .mobile#top-page .sc h3:after {
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+    .mobile#top-page .sc h4 {
+      text-align: left;
+      font-size: 40px;
+      letter-spacing: 0.2em;
+      width: 100%;
+      border-bottom: #ffa9be solid 4px;
+      margin-bottom: 60px; }
+  .mobile#top-page .sc_staff {
+    margin-bottom: 45px; }
+    .mobile#top-page .sc_staff ul {
+      width: 670px;
+      margin: 0 auto; }
+    .mobile#top-page .sc_staff li {
+      width: 190px;
+      float: left;
+      margin-right: 40px;
+      margin-bottom: 22px; }
+      .mobile#top-page .sc_staff li:nth-child(4n) {
+        margin-right: 40px; }
+    .mobile#top-page .sc_staff .des {
+      font-size: 16px;
+      border-bottom: #777790 solid 4px;
+      line-height: 2.5em;
+      margin-bottom: 15px; }
+    .mobile#top-page .sc_staff .name {
+      font-family: "NotoSans-bold", sans-serif;
+      letter-spacing: 0.03em;
+      white-space: nowrap; }
+      .mobile#top-page .sc_staff .name span {
+        font-size: 16px;
+        line-height: 2.5em; }
+    .mobile#top-page .sc_staff .staff_list1 li {
+      width: 315px; }
+      .mobile#top-page .sc_staff .staff_list1 li:nth-child(2n) {
+        margin-right: 0; }
+    .mobile#top-page .sc_staff .staff_list1 .name {
+      font-size: 48px; }
+    .mobile#top-page .sc_staff .staff_list2 li {
+      width: 196px; }
+    .mobile#top-page .sc_staff .staff_list2 .name {
+      font-size: 20px; }
+    .mobile#top-page .sc_staff .staff_list2 .sp-wide:nth-child(1), .mobile#top-page .sc_staff .staff_list2 .sp-wide:nth-child(2) {
+      width: 315px; }
+    .mobile#top-page .sc_staff .staff_list2 .sp-wide:nth-child(2) {
+      margin-right: 0; }
+    .mobile#top-page .sc_staff .staff_list2 .sp-wide .name {
+      font-size: 38px; }
+    .mobile#top-page .sc_staff .staff_list2 .sp-last {
+      margin-right: 0; }
+    .mobile#top-page .sc_staff .staff_list3 {
+      width: 620px;
+      margin: 0 auto; }
+      .mobile#top-page .sc_staff .staff_list3 li {
+        width: 100%;
+        margin-right: 0; }
+      .mobile#top-page .sc_staff .staff_list3 .name {
+        font-size: 38px; }
+  .mobile#top-page .sc_cast ul {
+    width: 670px;
+    margin: 0 auto; }
+  .mobile#top-page .sc_cast li {
+    width: 315px;
+    margin-right: 40px;
+    margin-bottom: 30px; }
+    .mobile#top-page .sc_cast li:nth-child(4n) {
+      margin-right: 40px; }
+    .mobile#top-page .sc_cast li:nth-child(2n) {
+      margin-right: 0; }
+  .mobile#top-page .sc_cast .name {
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    border-bottom: #777790 solid 4px;
+    line-height: 2.5em;
+    margin-bottom: 15px; }
+  .mobile#top-page .sc_cast .cv {
+    letter-spacing: 0.05em;
+    line-height: 1.1em;
+    font-size: 48px; }
+  .mobile#top-page .onair {
+    width: 100%;
+    padding-left: 0;
+    min-width: 750px;
+    height: auto; }
+    .mobile#top-page .onair .l-inner {
+      width: 690px;
+      text-align: center;
+      padding: 75px 0 200px 0; }
+    .mobile#top-page .onair h3 {
+      font-size: 60px;
+      letter-spacing: 0.2em;
+      position: relative;
+      left: auto;
+      top: auto;
+      margin-bottom: 80px; }
+      .mobile#top-page .onair h3:after {
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#top-page .onair_comment {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 643px; }
+    .mobile#top-page .onair_comment .bg {
+      position: relative;
+      left: auto;
+      top: auto; }
+      .mobile#top-page .onair_comment .bg img {
+        width: 643px;
+        height: auto; }
+    .mobile#top-page .onair_comment .text {
+      position: absolute;
+      left: 0px;
+      top: 50px;
+      z-index: 1;
+      text-align: center;
+      width: 100%; }
+      .mobile#top-page .onair_comment .text img {
+        width: 524px;
+        height: auto; }
+    .mobile#top-page .onair_comment .button {
+      position: absolute;
+      left: 0px;
+      top: 170px;
+      z-index: 1;
+      text-align: center;
+      width: 100%; }
+      .mobile#top-page .onair_comment .button a {
+        width: 100%;
+        display: block;
+        border: #777790 solid 4px;
+        padding: 40px 0;
+        font-size: 28px;
+        border-radius: 150px;
+        text-align: center;
+        width: 420px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin: 0 auto; }
+  .mobile#top-page .onair_sd {
+    position: absolute;
+    left: 592px;
+    top: 368px;
+    z-index: 0; }
+    .mobile#top-page .onair_sd img {
+      width: 107px;
+      height: auto; }
+  .mobile#top-page .music {
+    width: 100%;
+    padding-left: 0;
+    min-width: 750px; }
+    .mobile#top-page .music .l-inner {
+      width: 100%;
+      padding: 95px 0 140px 0;
+      border: none;
+      text-align: center;
+      overflow: hidden; }
+    .mobile#top-page .music h3 {
+      font-size: 60px;
+      letter-spacing: 0.2em;
+      margin-bottom: 90px; }
+      .mobile#top-page .music h3:after {
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#top-page .music_list {
+    width: 100%;
+    overflow: auto;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 40px;
+    padding-left: 90px; }
+    .mobile#top-page .music_list ul {
+      display: block;
+      width: 1880px; }
+    .mobile#top-page .music_list li {
+      width: 570px;
+      margin-right: 40px; }
+      .mobile#top-page .music_list li:nth-child(3n) {
+        margin-right: 40px; }
+    .mobile#top-page .music_list .jacket {
+      margin-bottom: 30px;
+      box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.15);
+      width: 570px;
+      height: 570px; }
+      .mobile#top-page .music_list .jacket p {
+        font-size: 28px;
+        border: #ffffff solid 10px; }
+      .mobile#top-page .music_list .jacket img {
+        width: 570px;
+        height: auto; }
+    .mobile#top-page .music_list .genre {
+      font-size: 30px;
+      border-bottom: #777790 solid 4px;
+      padding-bottom: 15px;
+      margin-bottom: 15px; }
+    .mobile#top-page .music_list .title {
+      font-size: 40px;
+      margin-bottom: 15px; }
+    .mobile#top-page .music_list .artist {
+      font-size: 26px; }
+  .mobile#top-page .movie {
+    width: 100%;
+    padding-left: 0;
+    min-width: 750px; }
+    .mobile#top-page .movie .l-inner {
+      width: 690px;
+      padding: 80px 0 180px 0;
+      border: none;
+      text-align: center; }
+    .mobile#top-page .movie h3 {
+      font-size: 60px;
+      letter-spacing: 0.2em;
+      margin-bottom: 90px; }
+      .mobile#top-page .movie h3:after {
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#top-page .movie_player {
+    margin-bottom: 20px; }
+    .mobile#top-page .movie_player iframe {
+      width: 100%;
+      height: 387px; }
+  .mobile#top-page .movie_thumb {
+    margin-bottom: 40px; }
+    .mobile#top-page .movie_thumb li {
+      width: 220px;
+      float: left;
+      margin: 0 15px 20px 0; }
+      .mobile#top-page .movie_thumb li:nth-child(3n) {
+        margin-right: 0; }
+    .mobile#top-page .movie_thumb .thumb {
+      height: 124px;
+      margin-bottom: 15px; }
+    .mobile#top-page .movie_thumb .title {
+      font-size: 18px; }
+      .mobile#top-page .movie_thumb .title br {
+        display: none; }
+  .mobile#top-page .movie_btn {
+    margin: 0 45px; }
+    .mobile#top-page .movie_btn a {
+      width: 100%;
+      display: block;
+      border: #777790 solid 4px;
+      padding: 40px 0;
+      font-size: 28px;
+      border-radius: 150px;
+      text-align: center; }
+  .mobile#top-page .special {
+    width: 100%;
+    padding-left: 0;
+    min-width: 750px; }
+    .mobile#top-page .special .l-inner {
+      width: 690px;
+      padding: 70px 0 160px 0;
+      border: none;
+      text-align: center; }
+    .mobile#top-page .special h3 {
+      font-size: 60px;
+      letter-spacing: 0.2em;
+      margin-bottom: 90px; }
+      .mobile#top-page .special h3:after {
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_w_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#top-page .special_list {
+    margin-bottom: 40px; }
+    .mobile#top-page .special_list li {
+      width: 220px;
+      float: left;
+      margin: 0 15px 20px 0; }
+      .mobile#top-page .special_list li:nth-child(3n) {
+        margin-right: 0; }
+    .mobile#top-page .special_list a {
+      padding: 14px 14px 20px 14px;
+      min-height: 370px; }
+    .mobile#top-page .special_list .ph img {
+      width: 190px;
+      height: auto; }
+    .mobile#top-page .special_list .title {
+      font-size: 18px; }
+      .mobile#top-page .special_list .title br {
+        display: none; }
+  .mobile#top-page .special_btn a {
+    width: 100%;
+    display: block;
+    border: #ffffff solid 4px;
+    padding: 40px 0;
+    font-size: 28px;
+    border-radius: 150px;
+    text-align: center; }
+  .mobile#top-page .comics {
+    width: 100%;
+    padding-left: 0;
+    min-width: 750px; }
+    .mobile#top-page .comics .l-inner {
+      width: 690px;
+      padding: 90px 0 100px 0;
+      border: none;
+      text-align: center; }
+    .mobile#top-page .comics h3 {
+      font-size: 60px;
+      letter-spacing: 0.2em;
+      margin-bottom: 340px; }
+      .mobile#top-page .comics h3:after {
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#top-page .comics_text {
+    position: absolute;
+    left: -18px;
+    top: 225px;
+    z-index: 0; }
+    .mobile#top-page .comics_text img {
+      width: 605px;
+      height: auto; }
+  .mobile#top-page .comics_sd {
+    position: absolute;
+    left: 547px;
+    top: 233px;
+    z-index: 1; }
+    .mobile#top-page .comics_sd img {
+      width: 160px;
+      height: auto; }
+  .mobile#top-page .comics_wrap {
+    height: auto !important;
+    letter-spacing: -0.75em; }
+    .mobile#top-page .comics_wrap .jacket {
+      position: relative;
+      left: auto !important;
+      top: auto !important;
+      width: 290px;
+      letter-spacing: normal;
+      display: inline-block;
+      margin: 0 15px 30px 15px; }
+      .mobile#top-page .comics_wrap .jacket img {
+        width: 100%;
+        height: auto; }
+  .mobile #modal {
+    min-width: 750px;
+    display: none; }
+    .mobile #modal .modal_inner {
+      padding: 80px 0 80px 0;
+      overflow: auto;
+      overflow-scrolling: touch;
+      -webkit-overflow-scrolling: touch; }
+  .mobile .charadetail_format {
+    display: none; }
+  .mobile .charadetail {
+    width: 690px;
+    border-radius: 0px 20px 20px 20px / 0px 20px 20px 20px;
+    -webkit-border-top-left-radius: 0px 0px;
+    -webkit-border-top-right-radius: 20px 20px;
+    -webkit-border-bottom-right-radius: 20px 20px;
+    -webkit-border-bottom-left-radius: 20px 20px;
+    -moz-border-radius-topleft: 0px 0px;
+    -moz-border-radius-topright: 20px 20px;
+    -moz-border-radius-bottomright: 20px 20px;
+    -moz-border-radius-bottomleft: 20px 20px;
+    padding-bottom: 50px;
+    margin-bottom: 30px; }
+  .mobile .charadetail_inner {
+    margin: 0 30px; }
+    .mobile .charadetail_inner .block_l {
+      width: 250px; }
+    .mobile .charadetail_inner .chara_face1 {
+      height: 440px;
+      margin-bottom: 10px; }
+      .mobile .charadetail_inner .chara_face1 img {
+        position: absolute;
+        left: -10px;
+        top: 10px;
+        z-index: 0;
+        width: 280px;
+        height: auto; }
+    .mobile .charadetail_inner .chara_face_sub {
+      letter-spacing: normal;
+      position: relative; }
+      .mobile .charadetail_inner .chara_face_sub li {
+        margin-right: 0; }
+        .mobile .charadetail_inner .chara_face_sub li:first-child {
+          position: absolute;
+          left: -10px;
+          top: 0px;
+          z-index: 0; }
+        .mobile .charadetail_inner .chara_face_sub li:last-child {
+          position: absolute;
+          right: -10px;
+          top: 0px;
+          z-index: 0; }
+        .mobile .charadetail_inner .chara_face_sub li img {
+          width: 130px;
+          height: auto; }
+    .mobile .charadetail_inner .block_r {
+      width: 345px;
+      padding-top: 55px; }
+    .mobile .charadetail_inner .chara_name {
+      margin-bottom: 40px; }
+      
+      .mobile .charadetail_inner .chara_name img {
+        width: 360px;
+        height: auto; }
+        
+    .mobile .charadetail_inner .chara_text {
+      font-size: 22px;
+      line-height: 1.8em;
+      background: url("https://slowstart-usa.com/shared/images/common/bar_dot1_sp.png") repeat-x left bottom;
+      padding-bottom: 30px; }
+    .mobile .charadetail_inner .message {
+      width: auto;
+      text-align: left;
+      padding: 15px 0 15px 20px;
+      height: 50px;
+      position: absolute;
+      left: -315px;
+      top: -50px;
+      z-index: 0;
+      right: auto;
+      border-radius: 20px 0px 0px 0px / 20px 0px 0px 0px;
+      -webkit-border-top-left-radius: 20px 20px;
+      -webkit-border-top-right-radius: 0px 0px;
+      -webkit-border-bottom-right-radius: 0px 0px;
+      -webkit-border-bottom-left-radius: 0px 0px;
+      -moz-border-radius-topleft: 20px 20px;
+      -moz-border-radius-topright: 0px 0px;
+      -moz-border-radius-bottomright: 0px 0px;
+      -moz-border-radius-bottomleft: 0px 0px;
+      -webkit-filter: drop-shadow(-10px -10px 10px rgba(0, 0, 0, 0.1));
+      filter: drop-shadow(-10px -10px 10px rgba(0, 0, 0, 0.1));
+      line-height: 1em; }
+      .mobile .charadetail_inner .message img {
+        height: 19px;
+        width: auto; }
+      .mobile .charadetail_inner .message p:after {
+        width: 118px;
+        height: 50px;
+        position: absolute;
+        right: -118px;
+        top: -15px;
+        z-index: 0;
+        left: auto;
+        bottom: auto; }
+    .mobile .charadetail_inner .prof_img {
+      float: right;
+      width: 170px;
+      position: relative; }
+      .mobile .charadetail_inner .prof_img p {
+        position: absolute;
+        right: 0px;
+        top: 15px;
+        z-index: 0; }
+        .mobile .charadetail_inner .prof_img p img {
+          width: 180px;
+          height: auto; }
+    .mobile .charadetail_inner .prof_spec {
+      float: left;
+      width: 175px;
+      padding-top: 40px; }
+    .mobile .charadetail_inner .prof_spec_value {
+      padding: 25px 0;
+      margin-bottom: 25px; }
+      .mobile .charadetail_inner .prof_spec_value p {
+        margin: 0 0 0 20px;
+        font-size: 16px;
+        margin-bottom: 3px; }
+        .mobile .charadetail_inner .prof_spec_value p:last-child {
+          margin-bottom: 0; }
+      .mobile .charadetail_inner .prof_spec_value span {
+        -webkit-transform: scale(4, 1);
+        -ms-transform: scale(4, 1);
+            transform: scale(4, 1);
+        margin: 0 10px; }
+    .mobile .charadetail_inner .prof_voice .prof_subhead,
+    .mobile .charadetail_inner .prof_movie .prof_subhead {
+      font-size: 18px;
+      margin-bottom: 4px;
+      white-space: nowrap; }
+    .mobile .charadetail_inner .prof_voice {
+      margin-bottom: 25px; }
+    .mobile .charadetail_inner .prof_movie_btn img {
+      width: 100%;
+      height: auto; }
+    .mobile .charadetail_inner .cv_wrap {
+      margin-top: 40px;
+      padding-top: 40px; }
+    .mobile .charadetail_inner .cv_ph {
+      width: 23%; }
+    .mobile .charadetail_inner .cv_detail {
+      width: 77%; }
+      .mobile .charadetail_inner .cv_detail .name {
+        font-size: 34px;
+        padding-left: 50px;
+        margin-bottom: 15px; }
+        .mobile .charadetail_inner .cv_detail .name:before {
+          font-size: 13px;
+          display: inline;
+          line-height: 1em;
+          padding: 4px 8px 4px 10px; }
+      .mobile .charadetail_inner .cv_detail .commnet_title {
+        font-size: 18px;
+        margin-bottom: 10px; }
+      .mobile .charadetail_inner .cv_detail .commnet_text {
+        font-size: 22px; }
+  .mobile .charadetail_nav {
+    width: 690px; }
+    .mobile .charadetail_nav ul {
+      width: 130px;
+      margin: 0 auto; }
+    .mobile .charadetail_nav .btn_slide {
+      display: none; }
+    .mobile .charadetail_nav .btn_close {
+      padding: 0; }
+      .mobile .charadetail_nav .btn_close img {
+        width: 130px;
+        height: auto; }
+        
+        .mobile .charadetail_sub {
+    width: 690px; }
+  .mobile .charadetail_inner_sub {
+    zoom: 1;
+    margin: 0 30px;
+    position: relative; }
+    .mobile .charadetail_inner_sub:after {
+      content: "";
+      clear: both;
+      display: block; }
+    .mobile .charadetail_inner_sub .block_l {
+      width: 100%;
+      float: none;
+      text-align: center;
+      padding-top: 85px;
+      margin-bottom: -25px; }
+      .mobile .charadetail_inner_sub .block_l img {
+        width: 506px;
+        height: auto; }
+    .mobile .charadetail_inner_sub .block_r {
+      width: 100%;
+      float: none;
+      padding: 0;
+      background: url("https://slowstart-usa.com/shared/images/common/bar_dot1_sp.png") repeat-x left top;
+      padding-top: 30px;
+      padding-bottom: 65px; }
+    .mobile .charadetail_inner_sub .chara_name {
+      margin-bottom: 0;
+      position: absolute;
+      left: 0px;
+      top: 55px;
+      z-index: 0; }
+    .mobile .charadetail_inner_sub .chara_text {
+      font-size: 22px;
+      margin-bottom: 30px; }
+    .mobile .charadetail_inner_sub .cv_block {
+      background: url("https://slowstart-usa.com/shared/images/common/bar_dot1_sp.png") repeat-x left top;
+      padding-top: 30px; }
+      .mobile .charadetail_inner_sub .cv_block .name {
+        font-size: 34px;
+        padding-left: 60px; }
+        .mobile .charadetail_inner_sub .cv_block .name:before {
+          font-size: 14px;
+          padding: 5px 10px 3px 12px; }
+  .mobile .charadetail_nav_sub {
+    width: 690px; }
+    .mobile .charadetail_nav_sub li a {
+      border-radius: 150px; }
+    .mobile .charadetail_nav_sub .btn_close {
+      padding: 0; }
+      .mobile .charadetail_nav_sub .btn_close img {
+        width: 130px;
+        height: auto; }
+        
+  .mobile #hana .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_hana_cmm_bg_sp.png") no-repeat left top; }
+  .mobile #tamate .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_tamate_cmm_bg_sp.png") no-repeat left top; }
+  .mobile #eiko .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_eiko_cmm_bg_sp.png") no-repeat left top; }
+  .mobile #kamuri .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_kamuri_cmm_bg_sp.png") no-repeat left top; }
+  .mobile #hiroe .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_hiroe_cmm_bg_sp.png") no-repeat left top; }
+  .mobile #shion .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_shion_cmm_bg_sp.png") no-repeat left top; }
+  .mobile #enami .charadetail_inner .message p:after {
+    background: url("https://slowstart-usa.com/shared/images/top/chara_d_enami_cmm_bg_sp.png") no-repeat left top; }
+.mobile#news-index-page .l-header h1, .mobile#news-detail-page .l-header h1, .mobile#onair-page .l-header h1, .mobile#music-page .l-header h1, .mobile#movie-page .l-header h1, .mobile#special-index-page .l-header h1, .mobile#special-page .l-header h1, .mobile#radio-page .l-header h1, .mobile#bd-dvd-page .l-header h1 {
+    display: none; }
+  .mobile#news-index-page .sp_hd_logo, .mobile#news-detail-page .sp_hd_logo, .mobile#onair-page .sp_hd_logo, .mobile#music-page .sp_hd_logo, .mobile#movie-page .sp_hd_logo, .mobile#special-index-page .sp_hd_logo, .mobile#special-page .sp_hd_logo, .mobile#radio-page .sp_hd_logo, .mobile#bd-dvd-page .sp_hd_logo {
+    display: block; }
+  .mobile#news-index-page .l-wrapper, .mobile#news-detail-page .l-wrapper, .mobile#onair-page .l-wrapper, .mobile#music-page .l-wrapper, .mobile#movie-page .l-wrapper, .mobile#special-index-page .l-wrapper, .mobile#special-page .l-wrapper, .mobile#radio-page .l-wrapper, .mobile#bd-dvd-page .l-wrapper {
+    padding-bottom: 85px; }
+  .mobile#news-index-page .headline {
+    padding-left: 0; }
+    .mobile#news-index-page .headline .l-inner {
+      width: 690px;
+      padding: 0 0 85px 0;
+      text-align: center; }
+    .mobile#news-index-page .headline h2 {
+      font-size: 60px; }
+      .mobile#news-index-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#news-index-page .main {
+    padding-left: 0;
+    margin-bottom: 50px; }
+    .mobile#news-index-page .main .l-inner {
+      width: 690px; }
+    .mobile#news-index-page .main .content_inner {
+      margin: 0 20px;
+      padding: 50px 0 50px 0; }
+  .mobile#news-index-page .main_list li {
+    background: url("https://slowstart-usa.com/shared/images/common/bar_dot1_sp.png") repeat-x left bottom;
+    padding-bottom: 30px;
+    margin-bottom: 25px; }
+    .mobile#news-index-page .main_list li:last-child {
+      padding: 0;
+      margin: 0;
+      background: none; }
+  .mobile#news-index-page .main_list .date {
+    font-size: 16px;
+    margin: 0 20px; }
+  .mobile#news-index-page .main_list .title {
+    margin: 0 20px;
+    font-size: 24px;
+    padding-left: 20px;
+    background: url("https://slowstart-usa.com/shared/images/common/icon_arw_pr.png") no-repeat left 17px; }
+    .mobile#news-index-page .main_list .title a {
+      background: none;
+      padding: 0; }
+  .mobile#news-index-page .paging {
+    padding-left: 0; }
+    .mobile#news-index-page .paging .l-inner {
+      width: 690px; }
+  .mobile#news-index-page .paging_nav li {
+    padding: 0 10px; }
+  .mobile#news-index-page .paging_nav a {
+    border-radius: 100px;
+    font-size: 24px;
+    border: #777790 4px solid; }
+  .mobile#news-index-page .paging_nav .prev,
+  .mobile#news-index-page .paging_nav .next {
+    padding: 0 20px; }
+    .mobile#news-index-page .paging_nav .prev a,
+    .mobile#news-index-page .paging_nav .next a {
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      line-height: 50px; }
+    .mobile#news-index-page .paging_nav .prev span,
+    .mobile#news-index-page .paging_nav .next span {
+      display: none; }
+  .mobile#news-index-page .paging_nav .prev a {
+    background: transparent url("https://slowstart-usa.com/shared/images/common/icon_arw_gl_sp.png") no-repeat center center; }
+  .mobile#news-index-page .paging_nav .next a {
+    background: transparent url("https://slowstart-usa.com/shared/images/common/icon_arw_gr_sp.png") no-repeat center center; }
+  .mobile#news-index-page .paging_nav .current span {
+    background-color: #777790;
+    color: #ffffff;
+    border-radius: 100px;
+    display: block;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    font-size: 24px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px; }
+  .mobile#news-index-page .paging_nav a {
+    width: 80px;
+    height: 80px;
+    line-height: 80px; }
+  .mobile#news-detail-page .headline {
+    padding-left: 0; }
+    .mobile#news-detail-page .headline .l-inner {
+      width: 690px;
+      padding: 0 0 85px 0;
+      text-align: center; }
+    .mobile#news-detail-page .headline h2 {
+      font-size: 60px; }
+      .mobile#news-detail-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#news-detail-page .main {
+    padding-left: 0;
+    margin-bottom: 50px; }
+    .mobile#news-detail-page .main .l-inner {
+      width: 690px;
+      background-color: #ffffff;
+      border-radius: 20px; }
+    .mobile#news-detail-page .main .content_inner {
+      margin: 0 20px;
+      padding: 40px 0 50px 0; }
+  .mobile#news-detail-page .main_headline {
+    background: url("https://slowstart-usa.com/shared/images/common/bar_dot1_sp.png") repeat-x center bottom;
+    padding-bottom: 30px;
+    margin-bottom: 30px; }
+    .mobile#news-detail-page .main_headline .date {
+      margin: 0 20px;
+      font-size: 16px;
+      margin-bottom: 5px; }
+    .mobile#news-detail-page .main_headline h3 {
+      margin: 0 20px;
+      font-size: 32px;
+      line-height: 1.7em; }
+  .mobile#news-detail-page .main_content {
+    margin: 0 20px;
+    font-size: 24px;
+    line-height: 2em;
+    min-height: auto; }
+    .mobile#news-detail-page .main_content strong {
+      font-size: 28px; }
+  .mobile#news-detail-page .paging {
+    padding-left: 0; }
+    .mobile#news-detail-page .paging .l-inner {
+      width: 690px; }
+  .mobile#news-detail-page .paging_nav li {
+    padding: 0 10px; }
+  .mobile#news-detail-page .paging_nav a {
+    border-radius: 100px;
+    font-size: 24px;
+    border: #777790 4px solid; }
+  .mobile#news-detail-page .paging_nav .prev,
+  .mobile#news-detail-page .paging_nav .next {
+    padding: 0 20px; }
+    .mobile#news-detail-page .paging_nav .prev a,
+    .mobile#news-detail-page .paging_nav .next a {
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      line-height: 50px; }
+    .mobile#news-detail-page .paging_nav .prev span,
+    .mobile#news-detail-page .paging_nav .next span {
+      display: none; }
+  .mobile#news-detail-page .paging_nav .prev a {
+    background: transparent url("https://slowstart-usa.com/shared/images/common/icon_arw_gl_sp.png") no-repeat center center; }
+  .mobile#news-detail-page .paging_nav .next a {
+    background: transparent url("https://slowstart-usa.com/shared/images/common/icon_arw_gr_sp.png") no-repeat center center; }
+  .mobile#news-detail-page .paging_nav .current span {
+    background-color: #777790;
+    color: #ffffff;
+    border-radius: 100px;
+    display: block;
+    font-family: "Arvo", sans-serif;
+    letter-spacing: 0.08em;
+    font-size: 24px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px; }
+  .mobile#news-detail-page .paging_nav a {
+    padding: 10px 40px 10px 40px; }
+  .mobile#onair-page .headline {
+    padding-left: 0; }
+    .mobile#onair-page .headline .l-inner {
+      width: 690px;
+      padding: 0 0 85px 0;
+      text-align: center; }
+    .mobile#onair-page .headline h2 {
+      font-size: 60px; }
+      .mobile#onair-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#onair-page .main {
+    padding-left: 0;
+    margin-bottom: 50px; }
+    .mobile#onair-page .main .l-inner {
+      width: 690px; }
+    .mobile#onair-page .main .content_inner {
+      margin-bottom: 60px; }
+    .mobile#onair-page .main .main_tv h3 img {
+      width: 661px;
+      height: auto; }
+    .mobile#onair-page .main .main_internet h3 img {
+      width: 466px;
+      height: auto; }
+    .mobile#onair-page .main h3 {
+      margin-bottom: 30px;
+      font-size: 24px; }
+  .mobile#onair-page .onair_graph {
+    margin-bottom: 15px; }
+    .mobile#onair-page .onair_graph ul:first-child {
+      border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px;
+      -webkit-border-top-left-radius: 20px 20px;
+      -webkit-border-top-right-radius: 20px 20px;
+      -webkit-border-bottom-right-radius: 0px 0px;
+      -webkit-border-bottom-left-radius: 0px 0px;
+      -moz-border-radius-topleft: 20px 20px;
+      -moz-border-radius-topright: 20px 20px;
+      -moz-border-radius-bottomright: 0px 0px;
+      -moz-border-radius-bottomleft: 0px 0px; }
+      .mobile#onair-page .onair_graph ul:first-child li {
+        letter-spacing: normal;
+        padding: 15px 0;
+        font-size: 20px; }
+      .mobile#onair-page .onair_graph ul:first-child span {
+        border-right: #f8f3ef solid 2px; }
+    .mobile#onair-page .onair_graph li {
+      border-right: #d9d9d9 solid 2px;
+      border-bottom: #d9d9d9 solid 2px;
+      letter-spacing: normal;
+      padding: 15px 10px;
+      font-size: 18px; }
+    .mobile#onair-page .onair_graph .station {
+      width: 23%; }
+    .mobile#onair-page .onair_graph .start {
+      width: 23%; }
+    .mobile#onair-page .onair_graph .day {
+      width: 9%; }
+    .mobile#onair-page .onair_graph .time {
+      width: 15%; }
+    .mobile#onair-page .onair_graph .caution {
+      width: 30%; }
+  .mobile#onair-page .onair_caps {
+    font-size: 14px; }
+  .mobile#music-page .headline {
+    padding-left: 0; }
+    .mobile#music-page .headline .l-inner {
+      width: 690px;
+      padding: 0 0 85px 0;
+      text-align: center; }
+    .mobile#music-page .headline h2 {
+      font-size: 60px; }
+      .mobile#music-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#music-page .localnav {
+    padding-left: 0;
+    margin-bottom: 50px; }
+    .mobile#music-page .localnav .l-inner {
+      width: 690px;
+      text-align: center; }
+  .mobile#music-page .paging_nav {
+    display: block;
+    zoom: 1; }
+    .mobile#music-page .paging_nav:after {
+      content: "";
+      clear: both;
+      display: block; }
+    .mobile#music-page .paging_nav li {
+      width: 220px;
+      margin-right: 0; }
+      .mobile#music-page .paging_nav li:first-child a {
+        border-radius: 100px 0px 0px 100px / 100px 0px 0px 100px;
+        -webkit-border-top-left-radius: 100px 100px;
+        -webkit-border-top-right-radius: 0px 0px;
+        -webkit-border-bottom-right-radius: 0px 0px;
+        -webkit-border-bottom-left-radius: 100px 100px;
+        -moz-border-radius-topleft: 100px 100px;
+        -moz-border-radius-topright: 0px 0px;
+        -moz-border-radius-bottomright: 0px 0px;
+        -moz-border-radius-bottomleft: 100px 100px; }
+      .mobile#music-page .paging_nav li:nth-child(2) a {
+        border-radius: 0px;
+        border-left: none;
+        border-right: none; }
+      .mobile#music-page .paging_nav li:last-child {
+        width: 250px; }
+        .mobile#music-page .paging_nav li:last-child a {
+          border-radius: 0px 100px 100px 0px / 0px 100px 100px 0px;
+          -webkit-border-top-left-radius: 0px 0px;
+          -webkit-border-top-right-radius: 100px 100px;
+          -webkit-border-bottom-right-radius: 100px 100px;
+          -webkit-border-bottom-left-radius: 0px 0px;
+          -moz-border-radius-topleft: 0px 0px;
+          -moz-border-radius-topright: 100px 100px;
+          -moz-border-radius-bottomright: 100px 100px;
+          -moz-border-radius-bottomleft: 0px 0px; }
+      .mobile#music-page .paging_nav li.current a {
+        background-color: #777790;
+        color: #ffffff; }
+    .mobile#music-page .paging_nav a {
+      padding: 20px 0;
+      border: #777790 2px solid;
+      font-size: 22px; }
+  .mobile#music-page .opening,
+  .mobile#music-page .ending,
+  .mobile#music-page .charasong {
+    padding-left: 0;
+    margin-bottom: 50px; }
+    .mobile#music-page .opening .l-inner,
+    .mobile#music-page .ending .l-inner,
+    .mobile#music-page .charasong .l-inner {
+      width: 690px; }
+    .mobile#music-page .opening .content_inner,
+    .mobile#music-page .ending .content_inner,
+    .mobile#music-page .charasong .content_inner {
+      margin: 0 20px;
+      padding: 40px 0 60px 0; }
+      .mobile#music-page .opening .content_inner h3,
+      .mobile#music-page .ending .content_inner h3,
+      .mobile#music-page .charasong .content_inner h3 {
+        font-size: 36px;
+        border-bottom: #777790 solid 4px;
+        padding-bottom: 35px;
+        margin-bottom: 40px; }
+    .mobile#music-page .opening .block_wrap,
+    .mobile#music-page .ending .block_wrap,
+    .mobile#music-page .charasong .block_wrap {
+      margin-bottom: 30px; }
+    .mobile#music-page .opening .block_l,
+    .mobile#music-page .ending .block_l,
+    .mobile#music-page .charasong .block_l {
+      width: auto;
+      float: none;
+      margin: 0 20px 40px 20px; }
+      .mobile#music-page .opening .block_l .jacket,
+      .mobile#music-page .ending .block_l .jacket,
+      .mobile#music-page .charasong .block_l .jacket {
+        width: 610px;
+        height: 610px; }
+        .mobile#music-page .opening .block_l .jacket p,
+        .mobile#music-page .ending .block_l .jacket p,
+        .mobile#music-page .charasong .block_l .jacket p {
+          font-size: 35px; }
+        .mobile#music-page .opening .block_l .jacket img,
+        .mobile#music-page .ending .block_l .jacket img,
+        .mobile#music-page .charasong .block_l .jacket img {
+          width: 100%;
+          height: auto; }
+    .mobile#music-page .opening .block_r,
+    .mobile#music-page .ending .block_r,
+    .mobile#music-page .charasong .block_r {
+      width: auto;
+      float: none;
+      margin: 0 20px; }
+      .mobile#music-page .opening .block_r .box,
+      .mobile#music-page .ending .block_r .box,
+      .mobile#music-page .charasong .block_r .box {
+        border-bottom: #777790 solid 2px;
+        padding-bottom: 40px;
+        margin-bottom: 30px; }
+        .mobile#music-page .opening .block_r .box:last-child,
+        .mobile#music-page .ending .block_r .box:last-child,
+        .mobile#music-page .charasong .block_r .box:last-child {
+          border: none;
+          padding: 0;
+          margin: 0; }
+      .mobile#music-page .opening .block_r .song_title,
+      .mobile#music-page .ending .block_r .song_title,
+      .mobile#music-page .charasong .block_r .song_title {
+        font-size: 40px;
+        text-align: center;
+        text-indent: 0;
+        margin-bottom: 20px; }
+      .mobile#music-page .opening .block_r .artist,
+      .mobile#music-page .ending .block_r .artist,
+      .mobile#music-page .charasong .block_r .artist {
+        text-align: center;
+        font-size: 28px;
+        line-height: 1.2em;
+        margin-bottom: 35px; }
+        .mobile#music-page .opening .block_r .artist span,
+        .mobile#music-page .ending .block_r .artist span,
+        .mobile#music-page .charasong .block_r .artist span {
+          font-size: 22px; }
+      .mobile#music-page .opening .block_r .comment_text,
+      .mobile#music-page .ending .block_r .comment_text,
+      .mobile#music-page .charasong .block_r .comment_text {
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+        line-height: 1.5em; }
+        .mobile#music-page .opening .block_r .comment_text strong,
+        .mobile#music-page .ending .block_r .comment_text strong,
+        .mobile#music-page .charasong .block_r .comment_text strong {
+          font-size: 22px;
+          display: block;
+          margin-right: 0; }
+      .mobile#music-page .opening .block_r .comment_list,
+      .mobile#music-page .ending .block_r .comment_list,
+      .mobile#music-page .charasong .block_r .comment_list {
+        margin-bottom: 20px; }
+        .mobile#music-page .opening .block_r .comment_list li,
+        .mobile#music-page .ending .block_r .comment_list li,
+        .mobile#music-page .charasong .block_r .comment_list li {
+          width: 293px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          box-sizing: content-box; }
+          .mobile#music-page .opening .block_r .comment_list li:last-child,
+          .mobile#music-page .ending .block_r .comment_list li:last-child,
+          .mobile#music-page .charasong .block_r .comment_list li:last-child {
+            margin-right: 10px; }
+          .mobile#music-page .opening .block_r .comment_list li:nth-child(2n),
+          .mobile#music-page .ending .block_r .comment_list li:nth-child(2n),
+          .mobile#music-page .charasong .block_r .comment_list li:nth-child(2n) {
+            margin-right: 0; }
+          .mobile#music-page .opening .block_r .comment_list li img,
+          .mobile#music-page .ending .block_r .comment_list li img,
+          .mobile#music-page .charasong .block_r .comment_list li img {
+            width: 100%;
+            height: auto; }
+      .mobile#music-page .opening .block_r .date,
+      .mobile#music-page .ending .block_r .date,
+      .mobile#music-page .charasong .block_r .date {
+        font-size: 22px;
+        text-align: center; }
+      .mobile#music-page .opening .block_r .spec,
+      .mobile#music-page .ending .block_r .spec,
+      .mobile#music-page .charasong .block_r .spec {
+        font-size: 18px;
+        text-align: center; }
+      .mobile#music-page .opening .block_r .detail_title,
+      .mobile#music-page .ending .block_r .detail_title,
+      .mobile#music-page .charasong .block_r .detail_title {
+        font-size: 16px; }
+        .mobile#music-page .opening .block_r .detail_title strong,
+        .mobile#music-page .ending .block_r .detail_title strong,
+        .mobile#music-page .charasong .block_r .detail_title strong {
+          font-size: 36px;
+          margin-right: 10px; }
+      .mobile#music-page .opening .block_r .sub_headline,
+      .mobile#music-page .ending .block_r .sub_headline,
+      .mobile#music-page .charasong .block_r .sub_headline {
+        font-size: 18px;
+        padding: 6px 30px 6px 30px;
+        border-radius: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px; }
+      .mobile#music-page .opening .block_r .tracklist,
+      .mobile#music-page .ending .block_r .tracklist,
+      .mobile#music-page .charasong .block_r .tracklist {
+        font-size: 26px; }
+      .mobile#music-page .opening .block_r .text,
+      .mobile#music-page .ending .block_r .text,
+      .mobile#music-page .charasong .block_r .text {
+        font-size: 22px; }
+        .mobile#music-page .opening .block_r .text strong,
+        .mobile#music-page .ending .block_r .text strong,
+        .mobile#music-page .charasong .block_r .text strong {
+          font-size: 26px;
+          margin-bottom: 5px; }
+        .mobile#music-page .opening .block_r .text .caps,
+        .mobile#music-page .ending .block_r .text .caps,
+        .mobile#music-page .charasong .block_r .text .caps {
+          font-size: 16px; }
+      .mobile#music-page .opening .block_r .tokuten_list,
+      .mobile#music-page .ending .block_r .tokuten_list,
+      .mobile#music-page .charasong .block_r .tokuten_list {
+        margin-top: 10px; }
+        .mobile#music-page .opening .block_r .tokuten_list li,
+        .mobile#music-page .ending .block_r .tokuten_list li,
+        .mobile#music-page .charasong .block_r .tokuten_list li {
+          border-left: #777790 solid 4px;
+          font-size: 26px;
+          padding-left: 20px;
+          margin-bottom: 25px; }
+      .mobile#music-page .opening .block_r .type_list,
+      .mobile#music-page .ending .block_r .type_list,
+      .mobile#music-page .charasong .block_r .type_list {
+        margin-top: 10px; }
+        .mobile#music-page .opening .block_r .type_list li,
+        .mobile#music-page .ending .block_r .type_list li,
+        .mobile#music-page .charasong .block_r .type_list li {
+          border-left: #777790 solid 4px;
+          padding-left: 20px;
+          margin-bottom: 25px; }
+        .mobile#music-page .opening .block_r .type_list .type,
+        .mobile#music-page .ending .block_r .type_list .type,
+        .mobile#music-page .charasong .block_r .type_list .type {
+          font-size: 32px; }
+          .mobile#music-page .opening .block_r .type_list .type span,
+          .mobile#music-page .ending .block_r .type_list .type span,
+          .mobile#music-page .charasong .block_r .type_list .type span {
+            font-size: 26px; }
+        .mobile#music-page .opening .block_r .type_list .spec,
+        .mobile#music-page .ending .block_r .type_list .spec,
+        .mobile#music-page .charasong .block_r .type_list .spec {
+          text-align: left; }
+      .mobile#music-page .opening .block_r .artist_ph img,
+      .mobile#music-page .ending .block_r .artist_ph img,
+      .mobile#music-page .charasong .block_r .artist_ph img {
+        width: 100%;
+        height: auto; }
+    .mobile#music-page .opening .btn_shop,
+    .mobile#music-page .ending .btn_shop,
+    .mobile#music-page .charasong .btn_shop {
+      text-align: center; }
+  .mobile#music-page .ending,
+  .mobile#music-page .charasong {
+    display: none; }
+  .mobile#movie-page .headline {
+    padding-left: 0; }
+    .mobile#movie-page .headline .l-inner {
+      width: 690px;
+      padding: 0 0 85px 0;
+      text-align: center; }
+    .mobile#movie-page .headline h2 {
+      font-size: 60px; }
+      .mobile#movie-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#movie-page .main {
+    padding-left: 0;
+    margin-bottom: 50px; }
+    .mobile#movie-page .main .l-inner {
+      width: 690px; }
+    .mobile#movie-page .main .content_inner {
+      margin-bottom: 0; }
+  .mobile#movie-page .movie_player {
+    margin-bottom: 50px;
+    width: 100%;
+    height: 387px; }
+    .mobile#movie-page .movie_player iframe {
+      width: 690px;
+      height: 387px; }
+  .mobile#movie-page .movie_thumb {
+    margin-bottom: 40px; }
+    .mobile#movie-page .movie_thumb li {
+      width: 330px;
+      margin: 0 30px 30px 0; }
+      .mobile#movie-page .movie_thumb li:nth-child(2n) {
+        margin-right: 0; }
+    .mobile#movie-page .movie_thumb .thumb {
+      height: 185px;
+      margin-bottom: 15px; }
+    .mobile#movie-page .movie_thumb .title {
+      font-size: 22px; }
+      .mobile#movie-page .movie_thumb .title br {
+        display: none; }
+  .mobile#special-index-page .headline {
+    padding-left: 0; }
+    .mobile#special-index-page .headline .l-inner {
+      width: 690px;
+      padding: 0 0 85px 0;
+      text-align: center; }
+    .mobile#special-index-page .headline h2 {
+      font-size: 60px; }
+      .mobile#special-index-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#special-index-page .main {
+    padding-left: 0;
+    margin-bottom: 50px; }
+    .mobile#special-index-page .main .l-inner {
+      width: 690px; }
+    .mobile#special-index-page .main .special_list {
+      margin-bottom: 40px; }
+      .mobile#special-index-page .main .special_list li {
+        width: 330px;
+        margin: 0 30px 50px 0; }
+        .mobile#special-index-page .main .special_list li:nth-child(2n) {
+          margin-right: 0; }
+      .mobile#special-index-page .main .special_list a {
+        padding: 14px 14px 20px 14px;
+        min-height: 480px; }
+      .mobile#special-index-page .main .special_list .ph img {
+        width: 300px;
+        height: auto; }
+      .mobile#special-index-page .main .special_list .title {
+        font-size: 22px; }
+        .mobile#special-index-page .main .special_list .title br {
+          display: none; }
+  .mobile#special-page .headline {
+    padding-left: 0; }
+    .mobile#special-page .headline .l-inner {
+      width: 690px;
+      padding: 0 0 85px 0;
+      text-align: center; }
+    .mobile#special-page .headline h2 {
+      font-size: 60px; }
+      .mobile#special-page .headline h2:after {
+        content: " ";
+        display: block;
+        background: url("https://slowstart-usa.com/shared/images/common/line_wave_g_sp.png") repeat-x left center;
+        height: 16px;
+        position: absolute;
+        left: 0px;
+        bottom: -25px;
+        z-index: 0; }
+  .mobile#special-page .main {
+    padding-left: 0;
+    margin-bottom: 50px; }
+    .mobile#special-page .main .l-inner {
+      width: 690px; }
+    .mobile#special-page .main .content_inner {
+      margin: 0 20px;
+      padding: 50px 0 60px 0; }
+  .mobile#special-page .main_headline {
+    background: url("https://slowstart-usa.com/shared/images/common/bar_dot1_sp.png") repeat-x center bottom;
+    padding-bottom: 35px;
+    margin-bottom: 35px; }
+    .mobile#special-page .main_headline h3 {
+      margin: 0 20px;
+      font-size: 32px;
+      line-height: 1.6em; }
+  .mobile#special-page .main_content {
+    margin: 0 20px;
+    font-size: 24px;
+    line-height: 1.8em;
+    min-height: 400px; }
+    .mobile#special-page .main_content a {
+      color: #ffa9be;
+      text-decoration: underline; }
+  .mobile#special-page .paging {
+    padding-left: 0; }
+    .mobile#special-page .paging .l-inner {
+      width: 690px;
+      text-align: center; }
+  .mobile#special-page .paging_top {
+    width: 60%;
+    margin: 0 auto; }
+    .mobile#special-page .paging_top a {
+      padding: 20px 120px 20px 120px;
+      font-size: 24px; }
