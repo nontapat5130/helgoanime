@@ -102,7 +102,7 @@ header,article,section,footer{ position: relative; width: 100%; display: block; 
 
 .cont-sub-atc{  padding-bottom: 9.233em; z-index: 3; }
 .cont-sub-atc.last{ margin-bottom: 0em; }
-.atc-title{ height: 8.5em; font-size: 1em; background: url(../images/common-sub-title-line.png) no-repeat center 4.0em; background-size: 12.666em auto; text-align: center; margin: 0;  }
+.atc-title{ height: 8.5em; font-size: 1em; background: url(https://lh3.googleusercontent.com/Wp3g31cgfSIfzEXej4kR3-_l4kZk3N9warihHxunKf2DrEvNTZPBzMqFw7Pkz_OVO4F-aZkz-eH7Usa4iAM3c2aSIzUiIG7gT0W_K2zbm_P6WqL0YjtKhHq2gNRvOKlwUq4WL8MmxD7WRN61hPCqE0y3VY9651g4_usdnqPB5EbSl1KInZco40-UhinNNcvsKAFE_jZY-4nWnJcjpoj-4dTZMX_h4rdkrIErfjvj8oZpLjqYa4BG8RA6W7lTXD-XEvs0Wsxvbkreagq6daPb1Nxx1G-9J8A7cVFuU5JaXwqj1VH18eJ849UUqm-i_3i1O0CCYKqQGrMcPgHg9JoOlLyU_9oZnEKwEfZoOu-NG-oybHdL1xOHACOKj4X1DpMIfy50zaaiG96cXbfAjUUs6ZRIYsgpMA1URBunbbWJ1H_KReq9VGrlToVPTqMOh5mxwW_lwhjKYOrjVqzh2WR5gZtskIcBo4MscXHJsIXdzIEKXU0Fp-7kefOrLTI_ffVjXDAjTFRhgkTVkXUEu_NnTTnFMRdHekNH8rZXYUo3EUokPQm9EJ08vHiYgSCAPFr0hBRJAkuiddavGsEWtTDsczfV7QnORsjtq3WEzxIkl97oLMMp26JlhbgRkkOBxzRn_KrHUJA4j_IEUhofQbYP_NMyLduG2UicMuVkzW2ejLvoaOpbNCb7R5w57KahtTI=w1647-h880-ft) no-repeat center 4.0em; background-size: 12.666em auto; text-align: center; margin: 0;  }
 .atc-title > span{ font-size: 1.4em; font-weight: 600; }
 .atc-title > span .char{ animation: anm-labelclr .4s 0s ease-out both paused; }
 .atc-title > span.inview-start  .char{ animation-play-state :running; }
@@ -176,7 +176,7 @@ transform-origin:center center; }
 
 /* content */
 
-.cs-image{ background: url(../images/story-cs-ptn.png) repeat; background-size: 9px auto; position: relative; }
+.cs-image{ background: url(https://bofuri.jp/images/story-cs-ptn.png) repeat; background-size: 9px auto; position: relative; }
 .cs-image:after{ content:"NOW PRINTING"; font-size: 0.866em; color:#c2c2c2; position: absolute; top:calc(50% - .5em); left: 0; right: 0; margin: 0 auto; display: block; text-align: center; line-height: 1; }
 
 .content-modal{ max-width: 920px; background-color: #FFF; border:#1f3c8c solid .333em ; border-radius: 2em; margin: 0 auto 1em auto; padding: 0; overflow: auto; }
@@ -500,12 +500,12 @@ transform-origin:center center; }
 .news-entry .news-img{ width: 100%; padding: 0; }
 .news-entry .news-img > div{ margin-bottom: 2.666em; }
 .news-entry .news-img .cont-thumb a{ display: block; width: 100%; min-height: 100%; position: relative; overflow: hidden; }
-.news-entry .news-img .cont-thumb a:after{ content:""; width: 100%; min-height: 100%; background: url(../images/movie-play-ic.png) no-repeat center center; background-size: 12em auto; position: absolute; top:0; left: 0; transition: .2s all ease-in-out 0s; }
+.news-entry .news-img .cont-thumb a:after{ content:""; width: 100%; min-height: 100%; background: url(https://lh3.googleusercontent.com/bRIO79BBFbN8ABIu1dIPKrodjqgRtg4DWZREaBIXJDx2B5osp4qx-WCxYtu1fYtjD57lx1itzP_qXhrXJ87YJmR4g2cQk5qnWXN7SCrucOlKxiRZT2cHvpt9nkWWvwxBYmOj_D-677g9YW1l7h8mz8znyLFqT0TP5w8k5Qj3ftnqoosUryYb4mwzrUYR46WoIzGOYAqruxB5mGJ5liq55vWA5QC6UkWtZDcUQUvu728OfyhKpiTeOKC-dphyq4Hu_QgrB67iKfwAs4rmL3HS9jKPwL5pQUoZtxa6ukUScuNsdhonFWN-bw7u04lmofP5uoojbnJ2f7YK7_tgBxjbFYHKXbVFPLG1huY4KsDGLFVKtVnyvgRyeAS0UAZUaFg1djownwywFjVvSWa2VZCnKRPsW2KpIAx5VFqLiVWKen1O7qA0r-7IEHgaRLNsNnpOxCylnJ3UJKAIBZvPdV2Szsx_tm-8_CCZPJSJc5VKTzFtVVk73pBV7lOF_cLaA1rEkNTY560i0ZuWHiwyeeIS68h8N1f5pkhNyp5xopDLC3EILihGdh9ZgCbpvWBjeuqkUlY-GmQ6UZiQBNmmpSWGnw6ft9ZKvjp5qW_cox0pzVCZokmyGAOKvc4AC4aclQ2bram06QtnHcxTu2X4XoLrbQeCCgaK3yRWloLV2hyPbXyD-KWXCy1nNwlh30Osefg=w1647-h880-ft) no-repeat center center; background-size: 12em auto; position: absolute; top:0; left: 0; transition: .2s all ease-in-out 0s; }
 .news-entry .news-img .cont-thumb a:hover:after{ background-size: 12em auto; transform: scale(1.1, 1.1); transform-origin:center center ; }
 
 
 /* STORY */
-#Page_Story .cont-sub-page-label:after{ background-image:url(../images/page-label/story.png); }
+#Page_Story .cont-sub-page-label:after{ background-image:url(https://bofuri.jp/images/page-label/story.png); }
 #Page_Story .cont-sub-atc{  padding-bottom: 6em; }
 .cont-ep-pllx-eyecatch{ width: 100vw; height: 28.666em; position: absolute; top:26.233em; z-index: 1; }
 .ep-pllx-eyecatch{ width: 100vw; height: 28.666em; position: relative; overflow: hidden; }
@@ -787,7 +787,7 @@ transform-origin:center center; }
 .movie-container .cont-label{ width: 10.47%; position: relative; overflow: hidden; }
 .movie-container .cont-thumb{ width: 89.53%; position: relative; }
 .movie-container .cont-thumb a{ display: block; width: 100%; min-height: 100%; position: relative; overflow: hidden; }
-.movie-container .cont-thumb a:after{ content:""; width: 100%; min-height: 100%; background: url(../images/movie-play-ic.png) no-repeat center center; background-size: 12em auto; position: absolute; top:0; left: 0; transition: .2s all ease-in-out 0s; }
+.movie-container .cont-thumb a:after{ content:""; width: 100%; min-height: 100%; background: url(https://lh3.googleusercontent.com/OMHBTgLqoFdMjmMQTGRx7o7fxgCm5KypP9ZHKYDmAapfBvdXOrYTwbcGmUKtxFuOwSUCestip-nOp6CFNYlMT4phtEOeEI3LlDLqHt4JlWPlLopD0d3Z29pC2kZGtyV5F4CPUgV0y0oyJSQfEpZ8p78wQax9UPkIFrpHYWGwPHDpbc3DTnFpQNrp_konotnwaFoLLaVHkC9fTyGtSaOqVGPzqohJa2Y3b4ODJMCO4h5TQ8Mw066jCWtuF1FaGHaMWDV0zFsYLaj5EbB_Tg7Wl9wDs2wuMdh8ayRWqjnuVNBlx3ZI6oNO1QnhOh8VtGUIsuV0cuXZ48tUPOCZM5WWALND48knjnrBMhrD8oJlRvKtBZtrg3rwSwBDphNg0itSXhsFOAtNcHLFkVWRVDBFsMDQC8XEBMBUPAxgsbTi6p-jw2Z4nfZjgfAeeTGpoHahNsRZ-kuWjZMaLNBclWTk_uE69W-JfAIuFQY7OOyL9rOFODwUEugNuC2YyCI9eyutQhxZvMIkk5rFZolZedXOl7XfQEmP9lp4fH7e4Pa59LKGTz-RJzejaqKKWaVYU3-Hd6fodno6Tb90rcp-76_qqTN-Xp7_4GGNZ1ZlWw_bdnHzPUcxilQrMG_I0yeBmjwHHko99bZWYutwQ4DGqVizcPsfWNhHTINqMLsPyyXv9iGRXRQG6oi6LN_hc_VkdxM=w1647-h880-ft) no-repeat center center; background-size: 12em auto; position: absolute; top:0; left: 0; transition: .2s all ease-in-out 0s; }
 .movie-container .cont-thumb a:hover:after{ background-size: 12em auto; transform: scale(1.1, 1.1); transform-origin:center center ; }
 .movie-container .lbl-date{ font-size: .8em; line-height: 1; transform: rotate(90deg); transform-origin: left top; position: absolute; top:0; left: 1.0em; }
 .movie-container .lbl-title{ color:#ef3488; line-height: 1; width: 300%; transform: rotate(90deg); transform-origin: left top; position: absolute; top:0; left: calc( 1.0em + 1.2em); width: 300%; }
